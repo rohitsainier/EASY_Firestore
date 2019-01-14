@@ -90,22 +90,22 @@ class CustomTabBarView: UIView {
         switch lastIndex {
         case 0:
             Btn1.isSelected = true
-            Lbl1.textColor = colorFromHex(hex: "#322889")
+            Lbl1.textColor = colorFromHex(hex: "#0072A4")
             
             break
         case 1:
             Btn2.isSelected = true
-            Lbl2.textColor = colorFromHex(hex: "#322889")
+            Lbl2.textColor = colorFromHex(hex: "#0072A4")
             
             break
         case 2:
             Btn3.isSelected = true
-            Lbl3.textColor = colorFromHex(hex: "#322889")
+            Lbl3.textColor = colorFromHex(hex: "#0072A4")
             
             break
         case 3:
             Btn4.isSelected = true
-            Lbl4.textColor = colorFromHex(hex: "#322889")
+            Lbl4.textColor = colorFromHex(hex: "#0072A4")
             
             break
         default:

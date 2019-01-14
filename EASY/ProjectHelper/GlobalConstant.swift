@@ -7,3 +7,13 @@
 //
 
 import Foundation
+import UIKit
+
+struct STORYBOARD {
+    static var MAIN = UIStoryboard(name: "Main", bundle: nil)
+    static var HOME = UIStoryboard(name: "Home", bundle: nil)
+    static var MYCHAT = UIStoryboard(name: "MyChat", bundle: nil)
+    static var GROUPCHAT = UIStoryboard(name: "GroupChat", bundle: nil)
+    static var SETTINGS = UIStoryboard(name: "Settings", bundle: nil)
+    
+}

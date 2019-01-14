@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		223A186221EBAE8A004714D5 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A186121EBAE8A004714D5 /* Register.swift */; };
+		223A186421EBAEBF004714D5 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A186321EBAEBF004714D5 /* LoginVC.swift */; };
+		223A186721EBB1C1004714D5 /* GlobalConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A186621EBB1C1004714D5 /* GlobalConstant.swift */; };
+		223A186A21EBB322004714D5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A186921EBB322004714D5 /* Extensions.swift */; };
+		223A186C21EBB5BD004714D5 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A186B21EBB5BD004714D5 /* Utility.swift */; };
+		223A186E21EBBB81004714D5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A186D21EBBB81004714D5 /* User.swift */; };
+		2278F6B921ED1AF800DF524B /* CustomTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2278F6B621ED1AF800DF524B /* CustomTabBarView.xib */; };
+		2278F6BA21ED1AF800DF524B /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2278F6B721ED1AF800DF524B /* CustomTabBarView.swift */; };
+		2278F6BB21ED1AF800DF524B /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2278F6B821ED1AF800DF524B /* CustomTabBarController.swift */; };
+		2278F6BD21ED1B3000DF524B /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2278F6BC21ED1B3000DF524B /* Home.storyboard */; };
+		2278F6BF21ED1B6B00DF524B /* MyChat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2278F6BE21ED1B6B00DF524B /* MyChat.storyboard */; };
+		2278F6C121ED1B8200DF524B /* GroupChat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2278F6C021ED1B8200DF524B /* GroupChat.storyboard */; };
+		2278F6C321ED1B9800DF524B /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2278F6C221ED1B9800DF524B /* Settings.storyboard */; };
+		2278F6C521ED236800DF524B /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2278F6C421ED236800DF524B /* Home.swift */; };
+		2278F6C721ED237600DF524B /* MyChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2278F6C621ED237600DF524B /* MyChat.swift */; };
+		2278F6C921ED238400DF524B /* GroupChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2278F6C821ED238400DF524B /* GroupChat.swift */; };
+		2278F6CB21ED239400DF524B /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2278F6CA21ED239400DF524B /* Settings.swift */; };
 		2293543E21E25E7D000AC927 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2293543D21E25E7D000AC927 /* AppDelegate.swift */; };
 		2293544021E25E7D000AC927 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2293543F21E25E7D000AC927 /* ViewController.swift */; };
 		2293544321E25E7D000AC927 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2293544121E25E7D000AC927 /* Main.storyboard */; };
@@ -38,6 +55,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		223A186121EBAE8A004714D5 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		223A186321EBAEBF004714D5 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		223A186621EBB1C1004714D5 /* GlobalConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstant.swift; sourceTree = "<group>"; };
+		223A186921EBB322004714D5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		223A186B21EBB5BD004714D5 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		223A186D21EBBB81004714D5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2278F6B621ED1AF800DF524B /* CustomTabBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTabBarView.xib; sourceTree = "<group>"; };
+		2278F6B721ED1AF800DF524B /* CustomTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
+		2278F6B821ED1AF800DF524B /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		2278F6BC21ED1B3000DF524B /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		2278F6BE21ED1B6B00DF524B /* MyChat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyChat.storyboard; sourceTree = "<group>"; };
+		2278F6C021ED1B8200DF524B /* GroupChat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GroupChat.storyboard; sourceTree = "<group>"; };
+		2278F6C221ED1B9800DF524B /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		2278F6C421ED236800DF524B /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		2278F6C621ED237600DF524B /* MyChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChat.swift; sourceTree = "<group>"; };
+		2278F6C821ED238400DF524B /* GroupChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChat.swift; sourceTree = "<group>"; };
+		2278F6CA21ED239400DF524B /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		2293543A21E25E7D000AC927 /* EASY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EASY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2293543D21E25E7D000AC927 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2293543F21E25E7D000AC927 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +135,66 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		223A186521EBB0C8004714D5 /* ProjectHelper */ = {
+			isa = PBXGroup;
+			children = (
+				223A186621EBB1C1004714D5 /* GlobalConstant.swift */,
+				223A186B21EBB5BD004714D5 /* Utility.swift */,
+			);
+			path = ProjectHelper;
+			sourceTree = "<group>";
+		};
+		223A186821EBB2F0004714D5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				223A186921EBB322004714D5 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2242CF7B21EB9F60002809F8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				223A186121EBAE8A004714D5 /* Register.swift */,
+				223A186321EBAEBF004714D5 /* LoginVC.swift */,
+				2278F6C421ED236800DF524B /* Home.swift */,
+				2278F6C621ED237600DF524B /* MyChat.swift */,
+				2278F6C821ED238400DF524B /* GroupChat.swift */,
+				2278F6CA21ED239400DF524B /* Settings.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2242CF7C21EB9F6A002809F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2293544121E25E7D000AC927 /* Main.storyboard */,
+				2278F6BC21ED1B3000DF524B /* Home.storyboard */,
+				2278F6BE21ED1B6B00DF524B /* MyChat.storyboard */,
+				2278F6C021ED1B8200DF524B /* GroupChat.storyboard */,
+				2278F6C221ED1B9800DF524B /* Settings.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2242CF7D21EB9F73002809F8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				223A186D21EBBB81004714D5 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2278F6B521ED1AF800DF524B /* CustomBottomBar */ = {
+			isa = PBXGroup;
+			children = (
+				2278F6B621ED1AF800DF524B /* CustomTabBarView.xib */,
+				2278F6B721ED1AF800DF524B /* CustomTabBarView.swift */,
+				2278F6B821ED1AF800DF524B /* CustomTabBarController.swift */,
+			);
+			path = CustomBottomBar;
+			sourceTree = "<group>";
+		};
 		2293543121E25E7D000AC927 = {
 			isa = PBXGroup;
 			children = (
@@ -126,9 +220,14 @@
 		2293543C21E25E7D000AC927 /* EASY */ = {
 			isa = PBXGroup;
 			children = (
+				223A186821EBB2F0004714D5 /* Extensions */,
+				223A186521EBB0C8004714D5 /* ProjectHelper */,
+				2242CF7D21EB9F73002809F8 /* Model */,
+				2242CF7C21EB9F6A002809F8 /* View */,
+				2278F6B521ED1AF800DF524B /* CustomBottomBar */,
+				2242CF7B21EB9F60002809F8 /* Controller */,
 				2293543D21E25E7D000AC927 /* AppDelegate.swift */,
 				2293543F21E25E7D000AC927 /* ViewController.swift */,
-				2293544121E25E7D000AC927 /* Main.storyboard */,
 				2293544421E25E80000AC927 /* Assets.xcassets */,
 				2293544621E25E80000AC927 /* LaunchScreen.storyboard */,
 				2293544921E25E80000AC927 /* Info.plist */,
@@ -276,10 +375,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2278F6C121ED1B8200DF524B /* GroupChat.storyboard in Resources */,
 				2293544821E25E80000AC927 /* LaunchScreen.storyboard in Resources */,
 				2293544521E25E80000AC927 /* Assets.xcassets in Resources */,
 				2293544321E25E7D000AC927 /* Main.storyboard in Resources */,
+				2278F6BD21ED1B3000DF524B /* Home.storyboard in Resources */,
 				2293546C21E26355000AC927 /* GoogleService-Info.plist in Resources */,
+				2278F6C321ED1B9800DF524B /* Settings.storyboard in Resources */,
+				2278F6BF21ED1B6B00DF524B /* MyChat.storyboard in Resources */,
+				2278F6B921ED1AF800DF524B /* CustomTabBarView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,8 +436,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-EASY/Pods-EASY-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
@@ -347,8 +455,12 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
@@ -413,7 +525,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2278F6BA21ED1AF800DF524B /* CustomTabBarView.swift in Sources */,
+				2278F6C921ED238400DF524B /* GroupChat.swift in Sources */,
+				223A186C21EBB5BD004714D5 /* Utility.swift in Sources */,
+				2278F6BB21ED1AF800DF524B /* CustomTabBarController.swift in Sources */,
+				2278F6CB21ED239400DF524B /* Settings.swift in Sources */,
+				2278F6C521ED236800DF524B /* Home.swift in Sources */,
+				223A186221EBAE8A004714D5 /* Register.swift in Sources */,
+				223A186A21EBB322004714D5 /* Extensions.swift in Sources */,
+				223A186721EBB1C1004714D5 /* GlobalConstant.swift in Sources */,
+				223A186E21EBBB81004714D5 /* User.swift in Sources */,
 				2293544021E25E7D000AC927 /* ViewController.swift in Sources */,
+				2278F6C721ED237600DF524B /* MyChat.swift in Sources */,
+				223A186421EBAEBF004714D5 /* LoginVC.swift in Sources */,
 				2293543E21E25E7D000AC927 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,6 +717,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6Q233F3ZPX;
 				INFOPLIST_FILE = EASY/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -612,6 +737,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6Q233F3ZPX;
 				INFOPLIST_FILE = EASY/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -8,12 +8,15 @@
 
 import UIKit
 import Firebase
+import NVActivityIndicatorView
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var activityLoader : NVActivityIndicatorView!
+    var customTabbarVc : CustomTabBarController!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -23,6 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //End
         //===============
+        
+        //IQKeyboardManager
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.shouldShowToolbarPlaceholder = true
         return true
     }
 
@@ -47,7 +54,55 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
+    //MARK:- sharedDelegate
+    func sharedDelegate() -> AppDelegate
+    {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
+    
+    //MARK:- Show Loader
+    func showLoader()
+    {
+        removeLoader()
+        window?.isUserInteractionEnabled = false
+        activityLoader = NVActivityIndicatorView(frame: CGRect(x: ((window?.frame.size.width)!-100)/2, y: ((window?.frame.size.height)!-100)/2, width: 100, height: 100))
+        activityLoader.type = .ballClipRotatePulse
+        activityLoader.color = UIColor.white
+        window?.addSubview(activityLoader)
+        activityLoader.startAnimating()
+    }
+    
+    //MARK:- Remove Loader
+    func removeLoader()
+    {
+        
+        window?.isUserInteractionEnabled = true
+        if activityLoader == nil
+        {
+            return
+        }
+        activityLoader.stopAnimating()
+        activityLoader.removeFromSuperview()
+        activityLoader = nil
+    }
+    
+    func storyboard() -> UIStoryboard
+    {
+        return UIStoryboard(name: "Main", bundle: nil)
+    }
+    
+    //MARK:- navigateToDashboard
+    func navigateToDashboard()
+    {
+        customTabbarVc = self.storyboard().instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController
+        
+        if let rootNavigatioVC : UINavigationController = self.window?.rootViewController as? UINavigationController
+        {
+            rootNavigatioVC.pushViewController(customTabbarVc, animated: false)
+        }
+        
+    }
 
 }
 

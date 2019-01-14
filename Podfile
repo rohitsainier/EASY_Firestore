@@ -7,7 +7,13 @@ target 'EASY' do
 
   # Pods for EASY
     pod 'Firebase/Core'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Storage'
+    pod 'Firebase/Messaging'
     pod 'Firebase/Firestore'
+    pod 'NVActivityIndicatorView'
+    pod 'Toaster'
+    pod 'IQKeyboardManagerSwift'
 
   target 'EASYTests' do
     inherit! :search_paths

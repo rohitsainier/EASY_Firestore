@@ -53,13 +53,13 @@ class CustomTabBarController: UITabBarController,CustomTabBarViewDelegate{
         viewControllers.append(navController1)
         
        
-        let navController2 : UINavigationController = STORYBOARD.SEARCH.instantiateViewController(withIdentifier: "SearchNavigation") as! UINavigationController
+        let navController2 : UINavigationController = STORYBOARD.MYCHAT.instantiateViewController(withIdentifier: "MyChatNavigation") as! UINavigationController
         viewControllers.append(navController2)
         
-        let navController3 : UINavigationController = STORYBOARD.ORDER.instantiateViewController(withIdentifier: "OrderNavigation") as! UINavigationController
+        let navController3 : UINavigationController = STORYBOARD.GROUPCHAT.instantiateViewController(withIdentifier: "GroupChatNavigation") as! UINavigationController
         viewControllers.append(navController3)
         
-        let navController4 : UINavigationController = STORYBOARD.PROFILE.instantiateViewController(withIdentifier: "ProfileNavigation") as! UINavigationController
+        let navController4 : UINavigationController = STORYBOARD.SETTINGS.instantiateViewController(withIdentifier: "SettingsNavigation") as! UINavigationController
         viewControllers.append(navController4)
         
         self.viewControllers = viewControllers;
