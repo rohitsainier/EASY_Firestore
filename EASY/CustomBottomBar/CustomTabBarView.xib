@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomTabBarView" customModule="OrderNow" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="CustomTabBarView" customModule="OrderNow" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bfB-5B-Gae">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <subviews>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NYm-PP-naa">
+                            <rect key="frame" x="0.0" y="0.0" width="72.5" height="50"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="10"/>
+                            <state key="normal" image="home_unselect"/>
+                            <state key="selected" image="home_select"/>
+                            <connections>
+                                <action selector="tabBtnClicked:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="dgB-FK-yab"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28Y-PS-ZN0">
+                            <rect key="frame" x="82.5" y="0.0" width="72.5" height="50"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="10"/>
+                            <state key="normal" image="search_unselect"/>
+                            <state key="selected" image="search_select"/>
+                            <connections>
+                                <action selector="tabBtnClicked:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="gaw-Su-cBP"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1za-9T-yLS">
+                            <rect key="frame" x="83" y="36" width="70" height="13"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="13" id="3cM-kl-bb4"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="10"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6OC-Xw-ZgJ">
+                            <rect key="frame" x="165" y="0.0" width="72.5" height="50"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="10"/>
+                            <state key="normal" image="order_unselect"/>
+                            <state key="selected" image="order_select"/>
+                            <connections>
+                                <action selector="tabBtnClicked:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="k9v-Qg-T6I"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdu-nc-6Lw">
+                            <rect key="frame" x="167" y="36" width="70" height="13"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="13" id="cmz-Ct-QDT"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="10"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KD0-6c-bSe">
+                            <rect key="frame" x="247.5" y="0.0" width="72.5" height="50"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="10"/>
+                            <state key="normal" image="profile_unselect"/>
+                            <state key="selected" image="profile_select"/>
+                            <connections>
+                                <action selector="tabBtnClicked:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="Esp-yu-nUw"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDT-Qw-hLs">
+                            <rect key="frame" x="0.0" y="36" width="73" height="13"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="13" id="J58-vE-7je"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="10"/>
+                            <color key="textColor" red="0.1960784314" green="0.15686274510000001" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxx-dS-QY6">
+                            <rect key="frame" x="248" y="37" width="70" height="13"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="13" id="rkX-sD-LU5"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="10"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="KD0-6c-bSe" firstAttribute="width" secondItem="NYm-PP-naa" secondAttribute="width" id="0LK-TU-ih5"/>
+                        <constraint firstItem="qxx-dS-QY6" firstAttribute="leading" secondItem="6OC-Xw-ZgJ" secondAttribute="trailing" constant="10.5" id="2p3-zO-MDP"/>
+                        <constraint firstItem="6OC-Xw-ZgJ" firstAttribute="leading" secondItem="1za-9T-yLS" secondAttribute="trailing" constant="12" id="7xJ-HN-zlR"/>
+                        <constraint firstItem="sdu-nc-6Lw" firstAttribute="leading" secondItem="28Y-PS-ZN0" secondAttribute="trailing" constant="12" id="Afa-Hb-Omj"/>
+                        <constraint firstAttribute="trailing" secondItem="qxx-dS-QY6" secondAttribute="trailing" constant="2" id="Bpb-6Y-aA2"/>
+                        <constraint firstAttribute="bottom" secondItem="1za-9T-yLS" secondAttribute="bottom" constant="1" id="DZ8-Kl-dc1"/>
+                        <constraint firstItem="28Y-PS-ZN0" firstAttribute="leading" secondItem="YDT-Qw-hLs" secondAttribute="trailing" constant="9.5" id="FqO-h0-kF4"/>
+                        <constraint firstItem="KD0-6c-bSe" firstAttribute="top" secondItem="bfB-5B-Gae" secondAttribute="top" id="Gtp-Fi-XTT"/>
+                        <constraint firstAttribute="bottom" secondItem="qxx-dS-QY6" secondAttribute="bottom" id="JDd-Mv-ieU"/>
+                        <constraint firstItem="YDT-Qw-hLs" firstAttribute="leading" secondItem="bfB-5B-Gae" secondAttribute="leading" id="L35-QA-Mq1"/>
+                        <constraint firstAttribute="bottom" secondItem="sdu-nc-6Lw" secondAttribute="bottom" constant="1" id="M6o-MI-AhS"/>
+                        <constraint firstItem="1za-9T-yLS" firstAttribute="leading" secondItem="YDT-Qw-hLs" secondAttribute="trailing" constant="10" id="Xbb-GF-Cu8"/>
+                        <constraint firstItem="KD0-6c-bSe" firstAttribute="leading" secondItem="sdu-nc-6Lw" secondAttribute="trailing" constant="10.5" id="aWp-zf-ten"/>
+                        <constraint firstItem="28Y-PS-ZN0" firstAttribute="width" secondItem="NYm-PP-naa" secondAttribute="width" id="bAT-Z6-fNd"/>
+                        <constraint firstItem="28Y-PS-ZN0" firstAttribute="top" secondItem="bfB-5B-Gae" secondAttribute="top" id="cEe-mS-G0k"/>
+                        <constraint firstAttribute="bottom" secondItem="NYm-PP-naa" secondAttribute="bottom" id="ebe-zz-OX9"/>
+                        <constraint firstAttribute="bottom" secondItem="YDT-Qw-hLs" secondAttribute="bottom" constant="1" id="ghy-xO-Jcx"/>
+                        <constraint firstItem="NYm-PP-naa" firstAttribute="top" secondItem="bfB-5B-Gae" secondAttribute="top" id="lXe-LH-lC2"/>
+                        <constraint firstItem="NYm-PP-naa" firstAttribute="leading" secondItem="bfB-5B-Gae" secondAttribute="leading" id="mJk-aL-t1m"/>
+                        <constraint firstAttribute="bottom" secondItem="28Y-PS-ZN0" secondAttribute="bottom" id="n7c-zV-Oxm"/>
+                        <constraint firstAttribute="bottom" secondItem="KD0-6c-bSe" secondAttribute="bottom" id="psQ-a6-81Y"/>
+                        <constraint firstItem="KD0-6c-bSe" firstAttribute="leading" secondItem="6OC-Xw-ZgJ" secondAttribute="trailing" constant="10" id="qjZ-CD-BaE"/>
+                        <constraint firstItem="6OC-Xw-ZgJ" firstAttribute="width" secondItem="NYm-PP-naa" secondAttribute="width" id="rF3-ty-Tqh"/>
+                        <constraint firstAttribute="trailing" secondItem="KD0-6c-bSe" secondAttribute="trailing" id="tQ9-E3-pYC"/>
+                        <constraint firstAttribute="bottom" secondItem="6OC-Xw-ZgJ" secondAttribute="bottom" id="u94-yL-aFp"/>
+                        <constraint firstItem="28Y-PS-ZN0" firstAttribute="leading" secondItem="NYm-PP-naa" secondAttribute="trailing" constant="10" id="vxy-dI-JR8"/>
+                        <constraint firstItem="6OC-Xw-ZgJ" firstAttribute="leading" secondItem="28Y-PS-ZN0" secondAttribute="trailing" constant="10" id="wCV-fh-zp0"/>
+                        <constraint firstItem="6OC-Xw-ZgJ" firstAttribute="top" secondItem="bfB-5B-Gae" secondAttribute="top" id="ypy-B2-Rel"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="bfB-5B-Gae" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="LXF-L6-w9M"/>
+                <constraint firstItem="bfB-5B-Gae" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Zbc-8B-Gua"/>
+                <constraint firstItem="bfB-5B-Gae" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="cSr-Hp-4Rg"/>
+                <constraint firstItem="bfB-5B-Gae" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nUa-hm-ali"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <connections>
+                <outlet property="Btn1" destination="NYm-PP-naa" id="L0U-6a-fuf"/>
+                <outlet property="Btn2" destination="28Y-PS-ZN0" id="m99-AC-bKd"/>
+                <outlet property="Btn3" destination="6OC-Xw-ZgJ" id="nSp-Cr-Plz"/>
+                <outlet property="Btn4" destination="KD0-6c-bSe" id="pml-Vl-QiH"/>
+                <outlet property="Lbl1" destination="YDT-Qw-hLs" id="jdR-iu-AGN"/>
+                <outlet property="Lbl2" destination="1za-9T-yLS" id="q8K-WC-avH"/>
+                <outlet property="Lbl3" destination="sdu-nc-6Lw" id="FWN-IF-YJx"/>
+                <outlet property="Lbl4" destination="qxx-dS-QY6" id="ioH-He-ZBv"/>
+            </connections>
+            <point key="canvasLocation" x="57.600000000000001" y="-537.03148425787106"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="home_select" width="35" height="35"/>
+        <image name="home_unselect" width="35" height="35"/>
+        <image name="order_select" width="35" height="35"/>
+        <image name="order_unselect" width="35" height="35"/>
+        <image name="profile_select" width="35" height="35"/>
+        <image name="profile_unselect" width="35" height="35"/>
+        <image name="search_select" width="35" height="35"/>
+        <image name="search_unselect" width="35" height="35"/>
+    </resources>
+</document>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EASY" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K5m-YS-Ika">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBd-ZM-enx">
+                                        <rect key="frame" x="162.5" y="308.5" width="50" height="50"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="N2l-ND-6CI"/>
+                                            <constraint firstAttribute="height" constant="50" id="hzZ-ri-HJa"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gp-7C-gHK">
+                                        <rect key="frame" x="30" y="388.5" width="315" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Qlc-IQ-d4g"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="LIVE">
+                                            <color key="titleColor" red="0.92549019610000005" green="0.30588235289999999" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goLiveBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zuD-6b-x7Y"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QwA-p0-MnZ">
+                                        <rect key="frame" x="30" y="468.5" width="315" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Drf-pX-DY6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="OFFLINE">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goOfflineBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yiW-Nw-GQX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="2gp-7C-gHK" firstAttribute="leading" secondItem="K5m-YS-Ika" secondAttribute="leading" constant="30" id="EpG-lJ-8nl"/>
+                                    <constraint firstAttribute="trailing" secondItem="QwA-p0-MnZ" secondAttribute="trailing" constant="30" id="FrW-lk-OCY"/>
+                                    <constraint firstAttribute="trailing" secondItem="2gp-7C-gHK" secondAttribute="trailing" constant="30" id="V5m-pL-a6e"/>
+                                    <constraint firstItem="QwA-p0-MnZ" firstAttribute="top" secondItem="2gp-7C-gHK" secondAttribute="bottom" constant="30" id="hCu-qX-O4k"/>
+                                    <constraint firstItem="QwA-p0-MnZ" firstAttribute="leading" secondItem="K5m-YS-Ika" secondAttribute="leading" constant="30" id="icJ-Wx-6Tl"/>
+                                    <constraint firstItem="MBd-ZM-enx" firstAttribute="centerY" secondItem="K5m-YS-Ika" secondAttribute="centerY" id="jd5-Tv-hkh"/>
+                                    <constraint firstItem="MBd-ZM-enx" firstAttribute="centerX" secondItem="K5m-YS-Ika" secondAttribute="centerX" id="liP-aT-Jci"/>
+                                    <constraint firstItem="2gp-7C-gHK" firstAttribute="top" secondItem="MBd-ZM-enx" secondAttribute="bottom" constant="30" id="xqQ-Nu-sLy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="K5m-YS-Ika" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="PBR-TS-849"/>
+                            <constraint firstItem="K5m-YS-Ika" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PaB-B2-jVF"/>
+                            <constraint firstItem="K5m-YS-Ika" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="h4W-5J-ucA"/>
+                            <constraint firstItem="K5m-YS-Ika" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yOv-95-EmU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="live_Or_Not" destination="MBd-ZM-enx" id="0If-08-YfW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="94.902548725637189"/>
+        </scene>
+    </scenes>
+</document>
