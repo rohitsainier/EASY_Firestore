@@ -48,22 +48,22 @@ class Register: UIViewController,UIImagePickerControllerDelegate,UINavigationCon
     
     //MARK:- animationSetup
     func animationSetup(){
-        UIView.animate(withDuration: 1, animations: {
+        UIView.animate(withDuration: 0.5, animations: {
             self.nameTxt.alpha = 1
         }) { (true) in
-            UIView.animate(withDuration: 1, animations: {
+            UIView.animate(withDuration: 0.5, animations: {
             self.emailTxt.alpha = 1
             }, completion: { (true) in
-                UIView.animate(withDuration: 1, animations: {
+                UIView.animate(withDuration: 0.5, animations: {
                     self.passwordTxt.alpha = 1
                 }, completion: { (true) in
-                    UIView.animate(withDuration: 1, animations: {
+                    UIView.animate(withDuration: 0.5, animations: {
                         self.mobileTxt.alpha = 1
                     }, completion: { (true) in
-                        UIView.animate(withDuration: 1, animations: {
+                        UIView.animate(withDuration: 0.5, animations: {
                             self.registerBtn.alpha = 1
                         }, completion: { (true) in
-                            UIView.animate(withDuration: 1, animations: {
+                            UIView.animate(withDuration: 0.5, animations: {
                                 self.loginLbl.alpha = 1
                             })
                         })

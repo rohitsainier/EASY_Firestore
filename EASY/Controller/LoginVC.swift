@@ -28,19 +28,19 @@ class LoginVC: UIViewController {
     
     //MARK:- animationSetup
     func animationSetup(){
-        UIView.animate(withDuration: 1, animations: {
+        UIView.animate(withDuration: 0.5, animations: {
             self.emailTxt.alpha = 1
         }) { (true) in
-            UIView.animate(withDuration: 1, animations: {
+            UIView.animate(withDuration: 0.5, animations: {
                 self.passwordTxt.alpha = 1
             }, completion: { (true) in
-                UIView.animate(withDuration: 1, animations: {
+                UIView.animate(withDuration: 0.5, animations: {
                     self.forgotBtn.alpha = 1
                 }, completion: { (true) in
-                    UIView.animate(withDuration: 1, animations: {
+                    UIView.animate(withDuration: 0.5, animations: {
                         self.loginBtnLbl.alpha = 1
                     }, completion: { (true) in
-                        UIView.animate(withDuration: 1, animations: {
+                        UIView.animate(withDuration: 0.5, animations: {
                             self.signUpLbl.alpha = 1
                         })
                     })
