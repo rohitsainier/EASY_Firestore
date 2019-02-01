@@ -17,7 +17,115 @@
                     <view key="view" contentMode="scaleToFill" id="883-lr-xM9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Whe-7k-Adx">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEJ-Bx-cml">
+                                        <rect key="frame" x="167" y="28.5" width="41.5" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.44705882352941173" blue="0.64313725490196072" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="CEJ-Bx-cml" firstAttribute="top" secondItem="Whe-7k-Adx" secondAttribute="top" constant="28.5" id="1Mz-nb-kpm"/>
+                                    <constraint firstAttribute="height" constant="70" id="5oC-uR-xdd"/>
+                                    <constraint firstItem="CEJ-Bx-cml" firstAttribute="centerX" secondItem="Whe-7k-Adx" secondAttribute="centerX" id="6db-gE-Snc"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="gradientBackgroundTypeAdapter">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Zgl-Fk-qQd">
+                                <rect key="frame" x="40" y="110" width="295" height="517"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2jF-aX-X5W">
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="238.5"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Create_Group" translatesAutoresizingMaskIntoConstraints="NO" id="Tyc-XU-x3O">
+                                                <rect key="frame" x="0.0" y="0.0" width="295" height="238.5"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CREATE GROUP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vk1-SD-coA">
+                                                <rect key="frame" x="20" y="183" width="255" height="35.5"/>
+                                                <color key="backgroundColor" red="0.0" green="0.44705882349999998" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="25"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLj-Fh-HMh">
+                                                <rect key="frame" x="0.0" y="0.0" width="295" height="238.5"/>
+                                                <connections>
+                                                    <action selector="clickCreateGroupBtn:" destination="ycN-Tw-Mng" eventType="touchUpInside" id="XsF-Ov-UWc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.92941176469999998" green="0.086274509799999996" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="vLj-Fh-HMh" firstAttribute="leading" secondItem="2jF-aX-X5W" secondAttribute="leading" id="0yP-ot-cmy"/>
+                                            <constraint firstAttribute="bottom" secondItem="Tyc-XU-x3O" secondAttribute="bottom" id="6CI-s2-KZP"/>
+                                            <constraint firstItem="Vk1-SD-coA" firstAttribute="leading" secondItem="2jF-aX-X5W" secondAttribute="leading" constant="20" id="8PS-eX-iNY"/>
+                                            <constraint firstItem="Tyc-XU-x3O" firstAttribute="leading" secondItem="2jF-aX-X5W" secondAttribute="leading" id="F50-Y0-EyR"/>
+                                            <constraint firstAttribute="trailing" secondItem="Vk1-SD-coA" secondAttribute="trailing" constant="20" id="MFe-zK-Y7j"/>
+                                            <constraint firstItem="vLj-Fh-HMh" firstAttribute="top" secondItem="2jF-aX-X5W" secondAttribute="top" id="ZxY-YI-N0W"/>
+                                            <constraint firstAttribute="trailing" secondItem="vLj-Fh-HMh" secondAttribute="trailing" id="bhd-CZ-451"/>
+                                            <constraint firstAttribute="bottom" secondItem="vLj-Fh-HMh" secondAttribute="bottom" id="cKm-NK-g1S"/>
+                                            <constraint firstAttribute="trailing" secondItem="Tyc-XU-x3O" secondAttribute="trailing" id="hHe-Bk-Sp6"/>
+                                            <constraint firstAttribute="bottom" secondItem="Vk1-SD-coA" secondAttribute="bottom" constant="20" id="k68-5o-88z"/>
+                                            <constraint firstItem="Tyc-XU-x3O" firstAttribute="top" secondItem="2jF-aX-X5W" secondAttribute="top" id="lqN-Hr-tg9"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gbh-ch-mOS">
+                                        <rect key="frame" x="0.0" y="278.5" width="295" height="238.5"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Join_Group" translatesAutoresizingMaskIntoConstraints="NO" id="7mW-hw-NL6">
+                                                <rect key="frame" x="0.0" y="0.0" width="295" height="238.5"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JOIN GROUP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R0t-OI-WqA">
+                                                <rect key="frame" x="20" y="183" width="255" height="35.5"/>
+                                                <color key="backgroundColor" red="0.0" green="0.44705882349999998" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="25"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M2a-2U-VVa">
+                                                <rect key="frame" x="0.0" y="0.0" width="295" height="238.5"/>
+                                                <connections>
+                                                    <action selector="clickJoinGroupBtn:" destination="ycN-Tw-Mng" eventType="touchUpInside" id="sRk-Ur-IL3"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.92941176469999998" green="0.086274509799999996" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="7mW-hw-NL6" secondAttribute="bottom" id="8eE-GD-0UP"/>
+                                            <constraint firstItem="7mW-hw-NL6" firstAttribute="top" secondItem="gbh-ch-mOS" secondAttribute="top" id="Crt-ke-NPg"/>
+                                            <constraint firstAttribute="trailing" secondItem="R0t-OI-WqA" secondAttribute="trailing" constant="20" id="JxY-Hv-lGm"/>
+                                            <constraint firstAttribute="bottom" secondItem="M2a-2U-VVa" secondAttribute="bottom" id="NsU-JW-FNv"/>
+                                            <constraint firstAttribute="bottom" secondItem="R0t-OI-WqA" secondAttribute="bottom" constant="20" id="WPg-qR-t4q"/>
+                                            <constraint firstAttribute="trailing" secondItem="7mW-hw-NL6" secondAttribute="trailing" id="aaF-s4-kQz"/>
+                                            <constraint firstAttribute="trailing" secondItem="M2a-2U-VVa" secondAttribute="trailing" id="eRY-SN-b1z"/>
+                                            <constraint firstItem="R0t-OI-WqA" firstAttribute="leading" secondItem="gbh-ch-mOS" secondAttribute="leading" constant="20" id="i2k-1l-vtZ"/>
+                                            <constraint firstItem="M2a-2U-VVa" firstAttribute="leading" secondItem="gbh-ch-mOS" secondAttribute="leading" id="pV3-U2-LhG"/>
+                                            <constraint firstItem="7mW-hw-NL6" firstAttribute="leading" secondItem="gbh-ch-mOS" secondAttribute="leading" id="z5D-rM-gFI"/>
+                                            <constraint firstItem="M2a-2U-VVa" firstAttribute="top" secondItem="gbh-ch-mOS" secondAttribute="top" id="zmL-JD-RLw"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.44705882352941173" blue="0.64313725490196072" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zgl-Fk-qQd" firstAttribute="top" secondItem="Whe-7k-Adx" secondAttribute="bottom" constant="40" id="9OV-SS-Nji"/>
+                            <constraint firstItem="Zgl-Fk-qQd" firstAttribute="leading" secondItem="Hsl-Gg-KKD" secondAttribute="leading" constant="40" id="Mkd-rR-4kU"/>
+                            <constraint firstItem="Whe-7k-Adx" firstAttribute="leading" secondItem="Hsl-Gg-KKD" secondAttribute="leading" id="Xdc-qi-GaO"/>
+                            <constraint firstItem="Hsl-Gg-KKD" firstAttribute="trailing" secondItem="Zgl-Fk-qQd" secondAttribute="trailing" constant="40" id="Xlb-Ki-rur"/>
+                            <constraint firstItem="Whe-7k-Adx" firstAttribute="top" secondItem="883-lr-xM9" secondAttribute="top" id="gGz-IH-66V"/>
+                            <constraint firstItem="Hsl-Gg-KKD" firstAttribute="bottom" secondItem="Zgl-Fk-qQd" secondAttribute="bottom" constant="40" id="lHu-vF-GGh"/>
+                            <constraint firstItem="Hsl-Gg-KKD" firstAttribute="trailing" secondItem="Whe-7k-Adx" secondAttribute="trailing" id="wOg-wq-4QX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Hsl-Gg-KKD"/>
                     </view>
                     <navigationItem key="navigationItem" id="t2L-ZD-kPQ"/>
@@ -25,6 +133,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U1T-D7-1pf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="407.19999999999999" y="-10.344827586206897"/>
+        </scene>
+        <!--Create Group-->
+        <scene sceneID="z7a-HG-Xwr">
+            <objects>
+                <viewController storyboardIdentifier="CreateGroup" id="dO8-5A-Arx" customClass="CreateGroup" customModule="EASY" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6qR-Zl-36k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yay-fC-t9J">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vqb-U9-BLI">
+                                        <rect key="frame" x="136.5" y="28.5" width="102" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Web-GI-S0w">
+                                        <rect key="frame" x="0.0" y="16" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="mTt-Bq-ubu"/>
+                                            <constraint firstAttribute="width" constant="50" id="onu-ZH-2Is"/>
+                                        </constraints>
+                                        <state key="normal" image="back_button_white"/>
+                                        <connections>
+                                            <action selector="clickBackBtn:" destination="dO8-5A-Arx" eventType="touchUpInside" id="2hD-HM-4VV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.44705882349999998" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Vqb-U9-BLI" firstAttribute="top" secondItem="yay-fC-t9J" secondAttribute="top" constant="28.5" id="Cgz-ml-EJT"/>
+                                    <constraint firstAttribute="height" constant="70" id="JVP-Au-qdI"/>
+                                    <constraint firstItem="Vqb-U9-BLI" firstAttribute="centerX" secondItem="yay-fC-t9J" secondAttribute="centerX" id="KME-Rb-pRK"/>
+                                    <constraint firstItem="Web-GI-S0w" firstAttribute="centerY" secondItem="Vqb-U9-BLI" secondAttribute="centerY" id="NzE-c7-BzP"/>
+                                    <constraint firstItem="Web-GI-S0w" firstAttribute="leading" secondItem="yay-fC-t9J" secondAttribute="leading" id="Vf9-e2-r96"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="gradientBackgroundTypeAdapter">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yay-fC-t9J" firstAttribute="top" secondItem="6qR-Zl-36k" secondAttribute="top" id="7aY-Rg-pFU"/>
+                            <constraint firstItem="yay-fC-t9J" firstAttribute="leading" secondItem="aeP-FR-auf" secondAttribute="leading" id="8RB-f2-WgU"/>
+                            <constraint firstItem="yay-fC-t9J" firstAttribute="trailing" secondItem="aeP-FR-auf" secondAttribute="trailing" id="8VF-vt-m7l"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aeP-FR-auf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8wt-Vj-mQa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1177" y="-12"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MjA-BF-5ch">
@@ -43,5 +208,67 @@
             </objects>
             <point key="canvasLocation" x="-532" y="-10.344827586206897"/>
         </scene>
+        <!--Join Group-->
+        <scene sceneID="JCl-rh-Q8g">
+            <objects>
+                <viewController storyboardIdentifier="JoinGroup" id="uao-X8-A5C" customClass="JoinGroup" customModule="EASY" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1li-hZ-J2E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jge-Wn-Adx">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Join Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34I-dj-xhB">
+                                        <rect key="frame" x="146" y="28.5" width="83" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.44705882349999998" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="34I-dj-xhB" firstAttribute="centerX" secondItem="jge-Wn-Adx" secondAttribute="centerX" id="ZRK-TR-GnV"/>
+                                    <constraint firstItem="34I-dj-xhB" firstAttribute="top" secondItem="jge-Wn-Adx" secondAttribute="top" constant="28.5" id="jHr-Dd-xHL"/>
+                                    <constraint firstAttribute="height" constant="70" id="xIk-Et-dOS"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="gradientBackgroundTypeAdapter">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jM2-so-xlZ">
+                                <rect key="frame" x="0.0" y="16" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="B2f-0y-BEw"/>
+                                    <constraint firstAttribute="width" constant="50" id="xDm-lq-60z"/>
+                                </constraints>
+                                <state key="normal" image="back_button_white"/>
+                                <connections>
+                                    <action selector="clickBackbtn:" destination="uao-X8-A5C" eventType="touchUpInside" id="sGN-f3-ehI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jge-Wn-Adx" firstAttribute="top" secondItem="1li-hZ-J2E" secondAttribute="top" id="dve-Li-Nh9"/>
+                            <constraint firstItem="jge-Wn-Adx" firstAttribute="leading" secondItem="yHc-js-n5h" secondAttribute="leading" id="eYa-V0-jCF"/>
+                            <constraint firstItem="jM2-so-xlZ" firstAttribute="leading" secondItem="yHc-js-n5h" secondAttribute="leading" id="ifd-Ce-meV"/>
+                            <constraint firstItem="jge-Wn-Adx" firstAttribute="trailing" secondItem="yHc-js-n5h" secondAttribute="trailing" id="lxD-Tq-V79"/>
+                            <constraint firstItem="jM2-so-xlZ" firstAttribute="centerY" secondItem="34I-dj-xhB" secondAttribute="centerY" id="mUO-tu-Ap5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yHc-js-n5h"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1v6-FR-lHz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1838" y="-10"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Create_Group" width="5000" height="3000"/>
+        <image name="Join_Group" width="5000" height="3000"/>
+        <image name="back_button_white" width="12" height="19.5"/>
+    </resources>
 </document>
