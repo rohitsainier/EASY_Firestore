@@ -1,14 +1,14 @@
 //
-//  GroupChat.swift
+//  ChatController.swift
 //  EASY
 //
-//  Created by Rohit Saini on 15/01/19.
+//  Created by Rohit Saini on 18/01/19.
 //  Copyright © 2019 Rohit Saini. All rights reserved.
 //
 
 import UIKit
 
-class GroupChat: UIViewController {
+class ChatController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
