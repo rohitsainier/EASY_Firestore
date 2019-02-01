@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+//========================
+//MARK:- STORYBOARD
 struct STORYBOARD {
     static var MAIN = UIStoryboard(name: "Main", bundle: nil)
     static var HOME = UIStoryboard(name: "Home", bundle: nil)
@@ -16,4 +18,20 @@ struct STORYBOARD {
     static var GROUPCHAT = UIStoryboard(name: "GroupChat", bundle: nil)
     static var SETTINGS = UIStoryboard(name: "Settings", bundle: nil)
     
+}
+
+//========================
+//MARK:- NAVIGATION
+struct NAVIGATION{
+    static func CreateGroup(){
+        let vc : CreateGroup = STORYBOARD.HOME.instantiateViewController(withIdentifier: "CreateGroup") as! CreateGroup
+        UIViewController.top?.navigationController?.pushViewController(vc, animated: true)
+    }
+    static func JoinGroup(){
+        let vc : JoinGroup = STORYBOARD.HOME.instantiateViewController(withIdentifier: "JoinGroup") as! JoinGroup
+        UIViewController.top?.navigationController?.pushViewController(vc, animated: true)
+    }
+    static func BackToPreviousController(){
+    UIViewController.top?.navigationController?.popViewController(animated: true)
+    }
 }
