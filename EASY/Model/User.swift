@@ -10,13 +10,15 @@ import Foundation
 import UIKit
 import Firebase
 import FirebaseAuth
-import FirebaseStorage
+//import FirebaseStorage
 import CoreLocation
 
 typealias Loginhandler = (_ msg:String?) -> Void //closure
 var db: Firestore!
 
-
+//=======================
+//MARK:- USER
+//=======================
 class User: NSObject {
     
     //MARK: Properties
@@ -68,12 +70,15 @@ class User: NSObject {
         static let INVALID_ACTION_CODE = "Action code is Invalid"
         static let INVALID_MESSAGE_PAYLOAD = "Message payload is not valid"
         static let INVALID_SENDER = "Sender is not valid"
-        static let INVALID_RECIPIENT_EMAIL = "r]Recipient mail is not valid"
+        static let INVALID_RECIPIENT_EMAIL = "Recipient mail is not valid"
         static let KEYCHAIN_ERROR = "Error in keychain"
         static let INTERNAL_ERROR = "Some internal Error"
         
     }//errorCodes
     
+    //=============================
+    //MARK:- handleErrors
+    //=============================
     class func handleErrors(err: NSError ,loginHandler:Loginhandler){
         
         if let errCode = AuthErrorCode(rawValue: err.code){
@@ -172,9 +177,13 @@ class User: NSObject {
             }
             
         }
-    }//HandleError func
+    }
+    //END error handler
     
     
+    //====================================
+    //MARK:- registerUser
+    //====================================
     class func registerUser(withName:String,email:String,password:String,phoneNumber: String ,profilePic:UIImage,location: Dictionary<String, Any>,loginHandler: Loginhandler?){
         // [START setup]
         let settings = FirestoreSettings()
@@ -219,9 +228,7 @@ class User: NSObject {
                                         }
                                     }else{
                                         removeLoader()
-                                        
                                         self.handleErrors(err: error! as NSError, loginHandler: loginHandler!)
-                                        
                                     }
                                 })
                                 
@@ -244,8 +251,13 @@ class User: NSObject {
             }
             
         }
-    }//Register User
+    }
+    //END Register User
     
+    
+    //==============================
+    //MARK:- loginUser
+    //==============================
     class func loginUser(email: String, password: String, loginHandler: Loginhandler?) {
         showLoader()
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
@@ -261,23 +273,60 @@ class User: NSObject {
                     removeLoader()
                     loginHandler!("Email is not verified")
                 }
-                //                Database.database().reference().child("users").child((user?.user.uid)!).child("credentials").observeSingleEvent(of: .value, with: { (snapshot) in
-                //                    let credentialsData = snapshot.value as! [String: Any]
-                //                    let isPhoneVerified = credentialsData["isVerified"] as! Bool
-                //                    if isPhoneVerified == true{
-                //                        loginHandler!(nil)
-                //                        UIViewController.removeSpinner(spinner: sv)
-                //                    }else{
-                //                        UIViewController.removeSpinner(spinner: sv)
-                //                        loginHandler!("Mobile Number is not Verified")
-                //                    }
-                //                })
+                
                 
             } else {
                 removeLoader()
                 self.handleErrors(err: error! as NSError, loginHandler: loginHandler!)
             }
         }
-}//Login User
-
+    }
+    //END Login User
+    
+    //============================
+    //MARK:- Download Users
+    //============================
+    
+    class func downloadAllUsers(exceptID: String, completion: @escaping (User) -> Swift.Void) {
+        // [START setup]
+        let settings = FirestoreSettings()
+        settings.areTimestampsInSnapshotsEnabled = true
+        Firestore.firestore().settings = settings
+        // [END setup]
+        db = Firestore.firestore()
+        db.collection("USER")
+            .getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        print("\(document.documentID) => \(document.data())")
+                       
+                       let data = document.data()
+                       let id = document.documentID
+                        guard let credentials = data["credentials"] as? [String: Any] else{
+                            return
+                        }
+                        if id != exceptID {
+                            let name = credentials["name"]!
+                            let email = credentials["email"]!
+                            let location = credentials["location"] as! [String: Any]
+                            let latitude = location["latitude"]
+                            let longitude = location["longitude"]
+                            let link = URL.init(string: credentials["profilePicLink"]! as! String)
+                            URLSession.shared.dataTask(with: link!, completionHandler: { (data, response, error) in
+                                if error == nil {
+                                    let profilePic = UIImage.init(data: data!)
+                                    let user = User.init(name: name as! String, email: email as! String, id: id, profilePic: profilePic!, latitude: latitude!, longitude: longitude!)
+                                    completion(user)
+                                }
+                            }).resume()
+                        }
+                    }
+                }
+            }
+}//Download all users
+    
+    
 }
+//END USER
