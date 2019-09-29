@@ -19,7 +19,7 @@ class MyChatCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        ImageView.roundCorners([.topLeft, .bottomLeft], radius: 10)
         // Configure the view for the selected state
     }
     

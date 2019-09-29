@@ -27,10 +27,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="370" height="99.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a20-21-Ged" customClass="View" customModule="UrbanKiddie" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a20-21-Ged" customClass="View" customModule="EASY" customModuleProvider="target">
                         <rect key="frame" x="20" y="10" width="330" height="84.5"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="group_avatar" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bf5-m3-LSa">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_avatar" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bf5-m3-LSa">
                                 <rect key="frame" x="0.0" y="0.0" width="95" height="84.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="95" id="1Os-L9-l0t"/>
@@ -93,7 +93,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="arrowblue" width="16" height="16"/>
-        <image name="group_avatar" width="16" height="16"/>
+        <image name="arrowblue" width="12" height="19.5"/>
+        <image name="user_avatar" width="94" height="94"/>
     </resources>
 </document>

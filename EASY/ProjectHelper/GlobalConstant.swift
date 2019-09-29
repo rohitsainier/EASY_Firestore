@@ -21,6 +21,12 @@ struct STORYBOARD {
 }
 
 //========================
+//MARK:- GROUPS_CATEGORIES
+struct GROUPS_CATEGORIES {
+    static var GROUP_PHOTOS_PLUS_NAME = ["Technology","Education","Travel","Gym","Fashion","Sports","Etc"]
+}
+
+//========================
 //MARK:- NAVIGATION
 struct NAVIGATION{
     static func CreateGroup(){

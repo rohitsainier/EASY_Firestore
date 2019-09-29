@@ -198,8 +198,8 @@ class User: NSObject {
                 user?.user.sendEmailVerification(completion: { (error) in
                     if error == nil{
                         let storageRef = Storage.storage().reference().child("usersProfilePics").child("\((user?.user.uid)!).jpg")
-                        let imageData = profilePic.jpegData(compressionQuality: 0.5)// UIImageJPEGRepresentation(profilePic, 0.1)//swift 3 version
-                        storageRef.putData(imageData!, metadata: nil, completion: { (metadata, err) in
+                        let imageData = compressImage(image: profilePic)// Compress Image to speed up the api
+                        storageRef.putData(imageData, metadata: nil, completion: { (metadata, err) in
                             if err == nil {
                                 storageRef.downloadURL(completion: { (url, error) in
                                     if error == nil{

@@ -10,10 +10,23 @@ import UIKit
 
 class CreateGroup: UIViewController {
 
+    
+    @IBOutlet weak var groupTxt: TextField!
+    @IBOutlet weak var groupImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        customization()
+       
 
         // Do any additional setup after loading the view.
+    }
+    
+    
+    private func customization(){
+        groupImage.roundCorners([.topLeft, .bottomLeft], radius: 20)
+        groupTxt.roundCorners([.topRight, .bottomRight], radius: 20)
+        groupTxt.layer.borderColor = colorFromHex(hex: "0072A4").cgColor
+        groupTxt.layer.borderWidth = 2
     }
     
     @IBAction func clickBackBtn(_ sender: UIButton) {

@@ -8,20 +8,52 @@
 
 import UIKit
 
-class Home: UIViewController {
-
+class Home: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    @IBOutlet weak var tableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableView.backgroundColor = UIColor.clear
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
+        tableView.register(UINib.init(nibName: "MyChatCell", bundle: nil), forCellReuseIdentifier: "MyChatCell")
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func clickCreateGroupBtn(_ sender: UIButton) {
-        NAVIGATION.CreateGroup()
+    
+    
+    //MARK: TableView DataSource
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100.0
     }
     
-    @IBAction func clickJoinGroupBtn(_ sender: UIButton) {
-        NAVIGATION.JoinGroup()
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return GROUPS_CATEGORIES.GROUP_PHOTOS_PLUS_NAME.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MyChatCell") as? MyChatCell else {
+            return UITableViewCell()
+        }
+        
+        cell.chatUserName.text = GROUPS_CATEGORIES.GROUP_PHOTOS_PLUS_NAME[indexPath.row]
+        cell.ImageView.image = UIImage(named: GROUPS_CATEGORIES.GROUP_PHOTOS_PLUS_NAME[indexPath.row])
+        return cell
+        
+    }
+    
+  
+    
+    private func getCategoriesList(){
+        
     }
     
     
