@@ -65,6 +65,11 @@ class CustomTabBarView: UIView {
     }
     
     
+    @IBAction func clickToCreatePostBtn(_ sender: UIButton) {
+        print("create Post clicked")
+    }
+    
+    
     //MARK:- Reset All Button
     func resetAllButton()
     {
