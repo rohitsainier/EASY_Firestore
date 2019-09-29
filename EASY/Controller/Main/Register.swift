@@ -97,8 +97,7 @@ class Register: UIViewController,UIImagePickerControllerDelegate,UINavigationCon
     
     //MARK:- navigateToRegister
     @objc func navigateToLogin(){
-        let vc : LoginVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-        self.navigationController?.pushViewController(vc, animated: true)
+        NAVIGATION.BackToPreviousController()
     }
     
     

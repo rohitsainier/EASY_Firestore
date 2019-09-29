@@ -29,14 +29,7 @@ struct GROUPS_CATEGORIES {
 //========================
 //MARK:- NAVIGATION
 struct NAVIGATION{
-    static func CreateGroup(){
-        let vc : CreateGroup = STORYBOARD.HOME.instantiateViewController(withIdentifier: "CreateGroup") as! CreateGroup
-        UIViewController.top?.navigationController?.pushViewController(vc, animated: true)
-    }
-    static func JoinGroup(){
-        let vc : JoinGroup = STORYBOARD.HOME.instantiateViewController(withIdentifier: "JoinGroup") as! JoinGroup
-        UIViewController.top?.navigationController?.pushViewController(vc, animated: true)
-    }
+  
     static func BackToPreviousController(){
     UIViewController.top?.navigationController?.popViewController(animated: true)
     }

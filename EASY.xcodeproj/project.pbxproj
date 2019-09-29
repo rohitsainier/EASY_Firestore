@@ -16,8 +16,6 @@
 		223A186C21EBB5BD004714D5 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A186B21EBB5BD004714D5 /* Utility.swift */; };
 		223A186E21EBBB81004714D5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A186D21EBBB81004714D5 /* User.swift */; };
 		2251429022041FFB00880F04 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2251428F22041FFB00880F04 /* Group.swift */; };
-		2253F988220382C600FF1AA8 /* CreateGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253F987220382C600FF1AA8 /* CreateGroup.swift */; };
-		2253F98A220382D600FF1AA8 /* JoinGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253F989220382D600FF1AA8 /* JoinGroup.swift */; };
 		227065C521EDC6FA00FAA2B8 /* MyChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227065C321EDC6FA00FAA2B8 /* MyChatCell.swift */; };
 		227065C621EDC6FA00FAA2B8 /* MyChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227065C421EDC6FA00FAA2B8 /* MyChatCell.xib */; };
 		2278F6B921ED1AF800DF524B /* CustomTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2278F6B621ED1AF800DF524B /* CustomTabBarView.xib */; };
@@ -72,8 +70,6 @@
 		223A186B21EBB5BD004714D5 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		223A186D21EBBB81004714D5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2251428F22041FFB00880F04 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
-		2253F987220382C600FF1AA8 /* CreateGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroup.swift; sourceTree = "<group>"; };
-		2253F989220382D600FF1AA8 /* JoinGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinGroup.swift; sourceTree = "<group>"; };
 		227065C321EDC6FA00FAA2B8 /* MyChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChatCell.swift; sourceTree = "<group>"; };
 		227065C421EDC6FA00FAA2B8 /* MyChatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyChatCell.xib; sourceTree = "<group>"; };
 		2278F6B621ED1AF800DF524B /* CustomTabBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTabBarView.xib; sourceTree = "<group>"; };
@@ -295,8 +291,6 @@
 			isa = PBXGroup;
 			children = (
 				2278F6C421ED236800DF524B /* Home.swift */,
-				2253F987220382C600FF1AA8 /* CreateGroup.swift */,
-				2253F989220382D600FF1AA8 /* JoinGroup.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -604,10 +598,8 @@
 				22F35ED221F104DA00C215BF /* ChatController.swift in Sources */,
 				2278F6BB21ED1AF800DF524B /* CustomTabBarController.swift in Sources */,
 				223009AE22056EE8003090A7 /* CustomView.swift in Sources */,
-				2253F98A220382D600FF1AA8 /* JoinGroup.swift in Sources */,
 				2251429022041FFB00880F04 /* Group.swift in Sources */,
 				227065C521EDC6FA00FAA2B8 /* MyChatCell.swift in Sources */,
-				2253F988220382C600FF1AA8 /* CreateGroup.swift in Sources */,
 				2278F6CB21ED239400DF524B /* Settings.swift in Sources */,
 				2278F6C521ED236800DF524B /* Home.swift in Sources */,
 				223A186221EBAE8A004714D5 /* Register.swift in Sources */,
