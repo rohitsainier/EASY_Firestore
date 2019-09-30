@@ -10,6 +10,7 @@ import UIKit
 
 class CreatePost: UIViewController {
 
+    @IBOutlet weak var postTextView: UITextView!
     @IBOutlet weak var galleryTrailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var cameraBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var cameraTrailingConstraint: NSLayoutConstraint!
@@ -81,6 +82,7 @@ class CreatePost: UIViewController {
     
     
     @IBAction func clickCameraBtn(_ sender: UIButton) {
+        addPostContent()
     }
     
     
@@ -90,6 +92,24 @@ class CreatePost: UIViewController {
     
     
     @IBAction func clickCategoryBtn(_ sender: UIButton) {
+    }
+    
+    private func addPostContent(){
+        var attributedString :NSMutableAttributedString!
+        attributedString = NSMutableAttributedString(attributedString:postTextView.attributedText)
+        let textAttachment = NSTextAttachment()
+        textAttachment.image = UIImage(named: "add")
+
+        let oldWidth = textAttachment.image!.size.width;
+
+        //I'm subtracting 10px to make the image display nicely, accounting
+        //for the padding inside the textView
+
+        let scaleFactor = oldWidth / (postTextView.frame.size.width - 10);
+        textAttachment.image = UIImage(cgImage: textAttachment.image!.cgImage!, scale: scaleFactor, orientation: .up)
+        let attrStringWithImage = NSAttributedString(attachment: textAttachment)
+        attributedString.append(attrStringWithImage)
+        postTextView.attributedText = attributedString;
     }
     
     

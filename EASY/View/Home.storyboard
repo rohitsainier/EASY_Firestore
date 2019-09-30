@@ -227,6 +227,7 @@
                         <outlet property="camerabtn" destination="pOd-Ic-W0E" id="87T-si-eBF"/>
                         <outlet property="galleryBtn" destination="Xik-Ud-viI" id="Me9-fz-KdL"/>
                         <outlet property="galleryTrailingConstraint" destination="hZh-Ut-BHY" id="7aP-mn-7ZG"/>
+                        <outlet property="postTextView" destination="XHC-RR-5li" id="JYa-5W-yBc"/>
                         <outlet property="profilePic" destination="XJa-m1-9U8" id="yRI-ZK-5bM"/>
                     </connections>
                 </viewController>
