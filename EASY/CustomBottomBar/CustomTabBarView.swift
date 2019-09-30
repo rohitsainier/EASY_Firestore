@@ -65,8 +65,12 @@ class CustomTabBarView: UIView {
     }
     
     
+    @available(iOS 13.0, *)
     @IBAction func clickToCreatePostBtn(_ sender: UIButton) {
         print("create Post clicked")
+        let vc = STORYBOARD.HOME.instantiateViewController(identifier: "CreatePost") as! CreatePost
+       
+        UIViewController.top?.present(vc, animated: true, completion: nil)
     }
     
     
