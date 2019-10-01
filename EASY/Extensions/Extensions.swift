@@ -12,6 +12,7 @@ import UIKit
 
 
 
+
 enum MessageType {
     case photo
     case text
@@ -107,6 +108,28 @@ extension UIImageView
         guard let url = URL(string: link) else { return }
         downloaded(from: url, contentMode: mode)
     }
+    func downloadCachedImage(placeholder: String,urlString: String){
+        self.sainiShowLoader(loaderColor: #colorLiteral(red: 0.06274509804, green: 0.1058823529, blue: 0.2235294118, alpha: 1))
+        let options: SDWebImageOptions = [.scaleDownLargeImages, .continueInBackground, .avoidAutoSetImage]
+        let placeholder = UIImage(named: placeholder)
+        self.sd_setImage(with: URL(string: urlString), placeholderImage: placeholder, options: options) { (image, _, cacheType, _) in
+            self.sainiRemoveLoader()
+            guard image != nil else {
+                self.sainiRemoveLoader()
+                return
+            }
+            guard cacheType != .memory, cacheType != .disk else {
+                self.image = image
+                self.sainiRemoveLoader()
+                return
+            }
+            UIView.transition(with: self, duration: 0.2, options: .transitionCrossDissolve, animations: {
+                self.sainiRemoveLoader()
+                self.image = image
+                return
+            }, completion: nil)
+        }
+    }
     
 }
 
@@ -138,5 +161,36 @@ extension UIViewController {
         }
     }
     
+}
+extension UIView{
+//MARK:- sainiShowLoader
+  func sainiShowLoader(loaderColor: UIColor, backgroundColor: UIColor = UIColor.clear) {
+      let backgroundView = UIView()
+      backgroundView.frame = CGRect.init(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height)
+      backgroundView.backgroundColor = backgroundColor
+      backgroundView.tag = 475647
+      let activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
+      activityIndicator.center = backgroundView.center
+      activityIndicator.hidesWhenStopped = true
+    if #available(iOS 13.0, *) {
+        activityIndicator.style = .large
+    } else {
+        // Fallback on earlier versions
+        activityIndicator.style = .white
+    }
+      activityIndicator.color = loaderColor
+      activityIndicator.startAnimating()
+      //self.isUserInteractionEnabled = false
+      backgroundView.addSubview(activityIndicator)
+      self.addSubview(backgroundView)
+  }
+  
+  //MARK:- sainiRemoveLoader
+  func sainiRemoveLoader() {
+      if let background = viewWithTag(475647){
+          background.removeFromSuperview()
+      }
+      //self.isUserInteractionEnabled = true
+  }
 }
 

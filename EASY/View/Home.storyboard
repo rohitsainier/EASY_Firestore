@@ -142,8 +142,9 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsr-lb-J0V">
-                                <rect key="frame" x="172.5" y="105" width="30" height="30"/>
-                                <state key="normal" title="Etc">
+                                <rect key="frame" x="122.5" y="105" width="130" height="37"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="17"/>
+                                <state key="normal" title="Select Category">
                                     <color key="titleColor" red="0.0" green="0.44705882349999998" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -151,82 +152,45 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write Something..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XHC-RR-5li">
-                                <rect key="frame" x="16" y="143" width="343" height="508"/>
+                                <rect key="frame" x="16" y="150" width="343" height="457"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Flf-N3-Akt">
-                                <rect key="frame" x="305" y="597" width="50" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HmX-Q1-EVl">
+                                <rect key="frame" x="162.5" y="607" width="50" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="7uC-9I-R7r"/>
-                                    <constraint firstAttribute="height" constant="50" id="cHj-nO-fP0"/>
+                                    <constraint firstAttribute="width" constant="50" id="H95-s8-EZ1"/>
+                                    <constraint firstAttribute="height" constant="50" id="Ovn-TW-fbv"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <state key="normal" title="✛">
-                                    <color key="titleColor" red="0.0" green="0.44705882349999998" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
+                                <state key="normal" image="add"/>
                                 <connections>
-                                    <action selector="clickAddBtn:" destination="DJI-wg-Br8" eventType="touchUpInside" id="TB9-05-Xhl"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOd-Ic-W0E">
-                                <rect key="frame" x="305" y="597" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="U4r-XV-peV"/>
-                                    <constraint firstAttribute="width" constant="50" id="x6Q-wF-Zjo"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="📸"/>
-                                <connections>
-                                    <action selector="clickCameraBtn:" destination="DJI-wg-Br8" eventType="touchUpInside" id="334-1u-bem"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xik-Ud-viI">
-                                <rect key="frame" x="305" y="597" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="TIa-Rd-OsL"/>
-                                    <constraint firstAttribute="width" constant="50" id="eR8-r2-flI"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="💾"/>
-                                <connections>
-                                    <action selector="clickGalleryBtn:" destination="DJI-wg-Br8" eventType="touchUpInside" id="b6N-13-YIP"/>
+                                    <action selector="clickAddBtn:" destination="DJI-wg-Br8" eventType="touchUpInside" id="uvV-ma-hbu"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Hbu-ek-iQl" firstAttribute="trailing" secondItem="pOd-Ic-W0E" secondAttribute="trailing" constant="20" id="0VB-5h-56b"/>
                             <constraint firstItem="XJa-m1-9U8" firstAttribute="bottom" secondItem="4ph-LF-lIQ" secondAttribute="bottom" constant="25" id="87r-9n-khs"/>
                             <constraint firstItem="nsr-lb-J0V" firstAttribute="top" secondItem="XJa-m1-9U8" secondAttribute="bottom" constant="10" id="Do0-yN-iVF"/>
                             <constraint firstItem="XHC-RR-5li" firstAttribute="top" secondItem="nsr-lb-J0V" secondAttribute="bottom" constant="8" id="Gwg-5H-YlL"/>
                             <constraint firstItem="Hbu-ek-iQl" firstAttribute="trailing" secondItem="XHC-RR-5li" secondAttribute="trailing" constant="16" id="HRq-rS-Mlv"/>
-                            <constraint firstItem="Hbu-ek-iQl" firstAttribute="bottom" secondItem="Xik-Ud-viI" secondAttribute="bottom" constant="20" id="Ltv-hK-yYH"/>
+                            <constraint firstItem="HmX-Q1-EVl" firstAttribute="centerX" secondItem="GRs-6R-43V" secondAttribute="centerX" id="Ixh-z7-Hzk"/>
+                            <constraint firstItem="Hbu-ek-iQl" firstAttribute="bottom" secondItem="HmX-Q1-EVl" secondAttribute="bottom" constant="10" id="KyB-PE-Aiz"/>
                             <constraint firstItem="4ph-LF-lIQ" firstAttribute="top" secondItem="Hbu-ek-iQl" secondAttribute="top" id="MLK-BF-xDM"/>
-                            <constraint firstItem="Hbu-ek-iQl" firstAttribute="trailing" secondItem="Flf-N3-Akt" secondAttribute="trailing" constant="20" id="N2E-02-KAf"/>
                             <constraint firstItem="4ph-LF-lIQ" firstAttribute="leading" secondItem="Hbu-ek-iQl" secondAttribute="leading" id="Smw-l8-Hd7"/>
                             <constraint firstItem="XJa-m1-9U8" firstAttribute="centerX" secondItem="GRs-6R-43V" secondAttribute="centerX" id="XVU-aD-lwl"/>
                             <constraint firstItem="nsr-lb-J0V" firstAttribute="centerX" secondItem="XJa-m1-9U8" secondAttribute="centerX" id="ZAi-of-6WD"/>
                             <constraint firstItem="Hbu-ek-iQl" firstAttribute="trailing" secondItem="4ph-LF-lIQ" secondAttribute="trailing" id="cqg-mh-Sit"/>
-                            <constraint firstItem="Flf-N3-Akt" firstAttribute="leading" secondItem="Xik-Ud-viI" secondAttribute="trailing" constant="-50" id="hZh-Ut-BHY"/>
-                            <constraint firstItem="Hbu-ek-iQl" firstAttribute="bottom" secondItem="XHC-RR-5li" secondAttribute="bottom" constant="16" id="mOw-Wp-r2n"/>
-                            <constraint firstItem="Hbu-ek-iQl" firstAttribute="bottom" secondItem="Flf-N3-Akt" secondAttribute="bottom" constant="20" id="tll-Lh-qT4"/>
+                            <constraint firstItem="Hbu-ek-iQl" firstAttribute="bottom" secondItem="XHC-RR-5li" secondAttribute="bottom" constant="60" id="mOw-Wp-r2n"/>
                             <constraint firstItem="XHC-RR-5li" firstAttribute="leading" secondItem="Hbu-ek-iQl" secondAttribute="leading" constant="16" id="une-rW-YuY"/>
-                            <constraint firstItem="Flf-N3-Akt" firstAttribute="top" secondItem="pOd-Ic-W0E" secondAttribute="bottom" constant="-50" id="zdh-YH-4uX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hbu-ek-iQl"/>
                     </view>
                     <navigationItem key="navigationItem" id="cvU-IE-wDQ"/>
                     <connections>
-                        <outlet property="addBtn" destination="Flf-N3-Akt" id="B2J-GK-YTd"/>
-                        <outlet property="cameraBottomConstraint" destination="zdh-YH-4uX" id="txU-Yx-KxV"/>
-                        <outlet property="cameraTrailingConstraint" destination="0VB-5h-56b" id="7Tg-Ul-DQa"/>
-                        <outlet property="camerabtn" destination="pOd-Ic-W0E" id="87T-si-eBF"/>
-                        <outlet property="galleryBtn" destination="Xik-Ud-viI" id="Me9-fz-KdL"/>
-                        <outlet property="galleryTrailingConstraint" destination="hZh-Ut-BHY" id="7aP-mn-7ZG"/>
+                        <outlet property="categoryBtn" destination="nsr-lb-J0V" id="bdQ-MF-Ua7"/>
                         <outlet property="postTextView" destination="XHC-RR-5li" id="JYa-5W-yBc"/>
                         <outlet property="profilePic" destination="XJa-m1-9U8" id="yRI-ZK-5bM"/>
                     </connections>
@@ -237,6 +201,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="add" width="128" height="128"/>
         <image name="user_avatar" width="94" height="94"/>
     </resources>
 </document>

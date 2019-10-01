@@ -6,6 +6,8 @@
 	<string>Easy required your camera access for taking amazing pictures</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Easy required your camera access for taking amazing pictures</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Easy required your microphone access for record amazing voice</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
