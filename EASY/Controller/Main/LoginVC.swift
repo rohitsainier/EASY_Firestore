@@ -104,9 +104,8 @@ class LoginVC: UIViewController {
         User.loginUser(email: emailTxt.text!, password: passwordTxt.text!, loginHandler: {(Loginhandler) in
             if Loginhandler == nil{
                 print("Logged in")
+                
                 AppDelegate().sharedDelegate().navigateToDashboard()
-
-
             }else{
                 showAlertwithTitle(title: "Error", desc: Loginhandler!, vc: self)
             }

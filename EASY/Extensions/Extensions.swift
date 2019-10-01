@@ -8,9 +8,7 @@
 
 import Foundation
 import UIKit
-
-
-
+import SDWebImage
 
 
 enum MessageType {

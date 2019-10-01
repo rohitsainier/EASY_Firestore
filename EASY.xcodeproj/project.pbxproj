@@ -38,6 +38,7 @@
 		2293545321E25E80000AC927 /* EASYTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2293545221E25E80000AC927 /* EASYTests.swift */; };
 		2293545E21E25E80000AC927 /* EASYUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2293545D21E25E80000AC927 /* EASYUITests.swift */; };
 		2293546C21E26355000AC927 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2293546B21E26355000AC927 /* GoogleService-Info.plist */; };
+		22A9D3432343E45B00C98B24 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A9D3422343E45B00C98B24 /* AppModel.swift */; };
 		22F35ED221F104DA00C215BF /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F35ED121F104DA00C215BF /* ChatController.swift */; };
 		78F2AB995DD16BA4B417FF8E /* Pods_EASYTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C25CCF48CFB67A478F55A54C /* Pods_EASYTests.framework */; };
 		9DD37F518423D0A8BFF36FA6 /* Pods_EASYUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAE0B760F00ED0A354EFBDF /* Pods_EASYUITests.framework */; };
@@ -99,6 +100,7 @@
 		2293545D21E25E80000AC927 /* EASYUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EASYUITests.swift; sourceTree = "<group>"; };
 		2293545F21E25E80000AC927 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2293546B21E26355000AC927 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		22A9D3422343E45B00C98B24 /* AppModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		22F35ED121F104DA00C215BF /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
 		35EB8354196583980EADC176 /* Pods_EASY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EASY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45519EA86E019E165059BC48 /* Pods-EASYTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EASYTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EASYTests/Pods-EASYTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		223A186521EBB0C8004714D5 /* ProjectHelper */ = {
 			isa = PBXGroup;
 			children = (
+				22A9D3422343E45B00C98B24 /* AppModel.swift */,
 				223A186621EBB1C1004714D5 /* GlobalConstant.swift */,
 				223A186B21EBB5BD004714D5 /* Utility.swift */,
 				223009AD22056EE8003090A7 /* CustomView.swift */,
@@ -511,6 +514,7 @@
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
@@ -530,6 +534,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
@@ -602,6 +607,7 @@
 				2278F6BB21ED1AF800DF524B /* CustomTabBarController.swift in Sources */,
 				223009AE22056EE8003090A7 /* CustomView.swift in Sources */,
 				2251429022041FFB00880F04 /* Group.swift in Sources */,
+				22A9D3432343E45B00C98B24 /* AppModel.swift in Sources */,
 				227065C521EDC6FA00FAA2B8 /* MyChatCell.swift in Sources */,
 				2278F6CB21ED239400DF524B /* Settings.swift in Sources */,
 				2278F6C521ED236800DF524B /* Home.swift in Sources */,

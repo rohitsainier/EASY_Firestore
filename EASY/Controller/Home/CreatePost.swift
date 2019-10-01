@@ -23,6 +23,7 @@ class CreatePost: UIViewController,UIImagePickerControllerDelegate,UINavigationC
     }
     
     private func customization(){
+        profilePic.downloadCachedImage(placeholder: "user_avatar", urlString: AppModel.shared.loggedInUser.profilePicLink)
         profilePic.layer.cornerRadius = profilePic.frame.height / 2
         profilePic.layer.masksToBounds = true
         profilePic.layer.borderWidth = 1

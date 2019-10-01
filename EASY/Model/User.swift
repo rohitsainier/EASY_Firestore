@@ -206,11 +206,11 @@ class User: NSObject {
                                         guard let path = url?.absoluteString else{
                                             return
                                         }
-                                        let values: [String: Any] = ["name": withName, "email": email, "profilePicLink": path,"phoneNumber":phoneNumber,"location":location]
+                                        let values: [String: Any] = ["id":(user?.user.uid)!,"name": withName, "email": email, "profilePicLink": path,"phoneNumber":phoneNumber,"location":location]
                                         let credentials : [String: Any] = ["credentials":values]
                                         var ref: DocumentReference? = nil
                                         
-                                        ref = db.collection("USER").document((user?.user.uid)!)
+                                        ref = db.collection("USERS").document((user?.user.uid)!)
                                         ref?.setData(credentials)
                                         { error in
                                             if let err = error {
@@ -267,8 +267,12 @@ class User: NSObject {
                     return
                 }
                 if status == true{
-                    removeLoader()
-                    loginHandler!(nil)
+                    downloadUserInfo(userId: (user?.user.uid)!) { (userInfo) in
+                        AppModel.shared.loggedInUser = userInfo
+                        removeLoader()
+                        loginHandler!(nil)
+                    }
+                    
                 }else{
                     removeLoader()
                     loginHandler!("Email is not verified")
@@ -294,7 +298,7 @@ class User: NSObject {
         Firestore.firestore().settings = settings
         // [END setup]
         db = Firestore.firestore()
-        db.collection("USER")
+        db.collection("USERS")
             .getDocuments() { (querySnapshot, err) in
                 if let err = err {
                     print("Error getting documents: \(err)")
@@ -326,6 +330,51 @@ class User: NSObject {
                 }
             }
 }//Download all users
+    
+    
+    //============================
+    //MARK:- Download User Info
+    //============================
+    
+    class func downloadUserInfo(userId: String, completion: @escaping (FirebaseUser) -> Swift.Void) {
+        // [START setup]
+        let settings = FirestoreSettings()
+        settings.areTimestampsInSnapshotsEnabled = true
+        Firestore.firestore().settings = settings
+        // [END setup]
+        db = Firestore.firestore()
+        db.collection("USERS")
+            .getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        print("\(document.documentID) => \(document.data())")
+                        
+                        let data = document.data()
+                        let id = document.documentID
+                        guard let credentials = data["credentials"] as? [String: Any] else{
+                            return
+                        }
+                        
+                        if id == userId {
+                            //Converting into json format
+                            let jsonData = try? JSONSerialization.data(withJSONObject: credentials, options: [])
+                            do {
+                                //Decoding data
+                                let user = try JSONDecoder().decode(FirebaseUser.self, from: jsonData!)
+                                completion(user)
+                                
+                            }
+                            catch let err {
+                                print("Err", err)
+                            }
+                        }
+                    }
+                }
+        }
+    }//Get User Info
+    
     
     
 }
