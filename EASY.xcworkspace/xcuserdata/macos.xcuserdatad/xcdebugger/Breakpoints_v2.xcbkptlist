@@ -75,128 +75,96 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "39C19518-0CA7-49FF-ADED-897E6D68F8EE"
+            uuid = "7C97ED0E-F1F1-4693-BE10-5A6C27A88DDE"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EASY/Model/User.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "271"
-            endingLineNumber = "271"
-            landmarkName = "loginUser(email:password:loginHandler:)"
+            startingLineNumber = "403"
+            endingLineNumber = "403"
+            landmarkName = "CreatePost(userId:username:categoryId:categoryName:postText:mediaType:postMediaData:videoUrl:loginHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "202C0663-192D-4C7C-B9CC-B84BF20AF4B3"
+            uuid = "FE1696F4-DAAB-446B-A44F-08BFDAB67746"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EASY/Model/User.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "347"
-            endingLineNumber = "347"
-            landmarkName = "downloadUserInfo(userId:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "202C0663-192D-4C7C-B9CC-B84BF20AF4B3 - adf47f502f204f49"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static EASY.User.downloadUserInfo(userId: Swift.String, completion: (EASY.FirebaseUser) -&gt; ()) -&gt; ()"
-                  moduleName = "EASY"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/macos/Documents/IOS_Heart/EASY_Firestore/EASY/Model/User.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "346"
-                  endingLineNumber = "346"
-                  offsetFromSymbolStart = "936">
-               </Location>
-               <Location
-                  uuid = "202C0663-192D-4C7C-B9CC-B84BF20AF4B3 - 4c8fd53207a69ba1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static EASY.User.downloadUserInfo(userId: Swift.String, completion: (EASY.FirebaseUser) -&gt; ()) -&gt; ()"
-                  moduleName = "EASY"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/macos/Documents/IOS_Heart/EASY_Firestore/EASY/Model/User.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "347"
-                  endingLineNumber = "347"
-                  offsetFromSymbolStart = "256">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "16EEBCCF-4F67-419F-B33A-25D80B8D45A5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EASY/Model/User.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "360"
-            endingLineNumber = "360"
-            landmarkName = "downloadUserInfo(userId:completion:)"
+            startingLineNumber = "434"
+            endingLineNumber = "434"
+            landmarkName = "CreatePost(userId:username:categoryId:categoryName:postText:mediaType:postMediaData:videoUrl:loginHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A19E2C8D-3C4F-478B-A738-2E430FBC0AA3"
+            uuid = "DB0EDD94-6CCD-46C2-9DFC-393521AE403F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EASY/Model/User.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "355"
-            endingLineNumber = "355"
-            landmarkName = "downloadUserInfo(userId:completion:)"
+            startingLineNumber = "436"
+            endingLineNumber = "436"
+            landmarkName = "CreatePost(userId:username:categoryId:categoryName:postText:mediaType:postMediaData:videoUrl:loginHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "88E129B8-0B19-4ADD-B932-B2CC30B0F7DA"
+            uuid = "C02B53E8-A8CE-4CED-819E-230D89D11782"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EASY/Model/User.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "357"
-            endingLineNumber = "357"
-            landmarkName = "downloadUserInfo(userId:completion:)"
+            startingLineNumber = "440"
+            endingLineNumber = "440"
+            landmarkName = "CreatePost(userId:username:categoryId:categoryName:postText:mediaType:postMediaData:videoUrl:loginHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CBB5D021-AC69-4BD7-A531-446EA27AE07F"
+            uuid = "FC8C9117-F8BA-496B-9193-708C45BCC9E8"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EASY/Model/User.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "352"
-            endingLineNumber = "352"
-            landmarkName = "downloadUserInfo(userId:completion:)"
+            startingLineNumber = "444"
+            endingLineNumber = "444"
+            landmarkName = "CreatePost(userId:username:categoryId:categoryName:postText:mediaType:postMediaData:videoUrl:loginHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "05EC876A-EF99-4DF8-A4E6-FC71D917C1C3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EASY/Model/User.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "446"
+            endingLineNumber = "446"
+            landmarkName = "CreatePost(userId:username:categoryId:categoryName:postText:mediaType:postMediaData:videoUrl:loginHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

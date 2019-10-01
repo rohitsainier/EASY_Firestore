@@ -16,6 +16,12 @@ import CoreLocation
 typealias Loginhandler = (_ msg:String?) -> Void //closure
 var db: Firestore!
 
+
+enum POSTMEDIA{
+    case IMAGE
+    case VIDEO
+}
+
 //=======================
 //MARK:- USER
 //=======================
@@ -376,6 +382,96 @@ class User: NSObject {
     }//Get User Info
     
     
+    class func CreatePost(userId:String,username:String,categoryId:String,categoryName: String ,postText:String,mediaType: POSTMEDIA,postMediaData:Data,videoUrl: URL?,loginHandler: Loginhandler?){
+           // [START setup]
+           let settings = FirestoreSettings()
+           settings.areTimestampsInSnapshotsEnabled = true
+           Firestore.firestore().settings = settings
+           // [END setup]
+           db = Firestore.firestore()
+           showLoader()
+        if mediaType == .IMAGE{
+            let storageRef = Storage.storage().reference().child("POSTS_IMAGES").child("\(Date().timeIntervalSince1970).jpg")
+            storageRef.putData(postMediaData, metadata: nil, completion: { (metadata, err) in
+                if err == nil {
+                    storageRef.downloadURL(completion: { (url, error) in
+                        if error == nil{
+                            guard let path = url?.absoluteString else{
+                                return
+                            }
+                            var ref: DocumentReference? = nil
+                            ref = db.collection("POSTS").document().collection(categoryName).document()
+                            let values: [String: Any] = ["userId": userId,"username": username, "categoryId": categoryId, "categoryName": categoryName,"postText":postText,"mediaType":"IMAGE","postUrl":path,"postId":(ref?.documentID)!]
+                            let postData : [String: Any] = ["data":values]
+                            ref?.setData(postData)
+                            { error in
+                                if let err = error {
+                                    print("Error updating document: \(err)")
+                                    removeLoader()
+                                    self.handleErrors(err: error! as NSError, loginHandler: loginHandler!)
+                                    
+                                } else {
+                                    removeLoader()
+                                    loginHandler!(nil)
+                                    print("Document successfully updated")
+                                }
+                                
+                                
+                            }
+                        }else{
+                            removeLoader()
+                            self.handleErrors(err: error! as NSError, loginHandler: loginHandler!)
+                        }
+                    })
+                    
+                }
+            })
+        }
+        else{
+            let fileName = NSUUID().uuidString + ".mov"
+            let storageRef = Storage.storage().reference().child("POSTS_VIDEOS").child(fileName)
+            storageRef.putFile(from: videoUrl!, metadata: nil, completion: { (metadata, err) in
+                if err == nil {
+                    storageRef.downloadURL(completion: { (url, error) in
+                        if error == nil{
+                            guard let path = url?.absoluteString else{
+                                return
+                            }
+                            var ref: DocumentReference? = nil
+                            ref = db.collection("POSTS").document().collection(categoryName).document()
+                            let values: [String: Any] = ["userId": userId,"username": username, "categoryId": categoryId, "categoryName": categoryName,"postText":postText,"mediaType":"VIDEO","postUrl":path,"postId":(ref?.documentID)!]
+                            let postData : [String: Any] = ["data":values]
+                            ref?.setData(postData)
+                            { error in
+                                if let err = error {
+                                    print("Error updating document: \(err)")
+                                    removeLoader()
+                                    self.handleErrors(err: error! as NSError, loginHandler: loginHandler!)
+                                    
+                                } else {
+                                    removeLoader()
+                                    loginHandler!(nil)
+                                    print("Document successfully updated")
+                                }
+                                
+                                
+                            }
+                        }else{
+                            removeLoader()
+                            self.handleErrors(err: error! as NSError, loginHandler: loginHandler!)
+                        }
+                    })
+                    
+                }
+            })
+        }
+
+        
+           
+       }
+       //END
+       
+       
     
 }
 //END USER

@@ -15,6 +15,11 @@ class CreatePost: UIViewController,UIImagePickerControllerDelegate,UINavigationC
     @IBOutlet weak var categoryBtn: UIButton!
     @IBOutlet weak var postTextView: UITextView!
     @IBOutlet weak var profilePic: UIImageView!
+    var isImagePost: Bool = true
+    var categoryID: String = ""
+    var categoryName: String = ""
+    var videoUrl: URL!
+    var PostImage: UIImage!
     override func viewDidLoad() {
         super.viewDidLoad()
         customization()
@@ -38,7 +43,27 @@ class CreatePost: UIViewController,UIImagePickerControllerDelegate,UINavigationC
             displayToast("Please select post category")
         }
         else{
-            self.dismiss(animated: true, completion: nil)
+            if isImagePost{
+                User.CreatePost(userId: AppModel.shared.loggedInUser.id, username: AppModel.shared.loggedInUser.name, categoryId: categoryID, categoryName: categoryName, postText: postTextView.text, mediaType: POSTMEDIA.IMAGE, postMediaData: compressImage(image: PostImage ?? UIImage()), videoUrl: nil) { (loginHandler) in
+                    if loginHandler == nil{
+                        displayToast("\(self.categoryName) Post created successfully")
+                    }
+                    else{
+                        displayToast(loginHandler ?? "")
+                    }
+                }
+            }
+            else{
+                User.CreatePost(userId: AppModel.shared.loggedInUser.id, username: AppModel.shared.loggedInUser.name, categoryId: categoryID, categoryName: categoryName, postText: postTextView.text, mediaType: POSTMEDIA.VIDEO, postMediaData: Data(), videoUrl: videoUrl) { (loginHandler) in
+                    if loginHandler == nil{
+                        displayToast("\(self.categoryName) Post created successfully")
+                    }
+                    else{
+                        displayToast(loginHandler ?? "")
+                    }
+                }
+            }
+            
         }
     }
     
@@ -53,6 +78,8 @@ class CreatePost: UIViewController,UIImagePickerControllerDelegate,UINavigationC
     
     @IBAction func clickCategoryBtn(_ sender: UIButton) {
         RPicker.selectOption(dataArray: GROUPS_CATEGORIES.GROUP_PHOTOS_PLUS_NAME) { [unowned self](category, index) in
+            self.categoryID = "\(index)"
+            self.categoryName = category
             self.categoryBtn.setTitle(category, for: UIControl.State.normal)
         }
     }
@@ -152,6 +179,8 @@ class CreatePost: UIViewController,UIImagePickerControllerDelegate,UINavigationC
                 
             if let thumbnailImage = thumbnailImageForFileUrl(fileUrl: videoUrl as URL){
                        picker.dismiss(animated: true, completion: {()  -> Void  in
+                        self.isImagePost = false
+                        self.videoUrl = videoUrl as URL
                         self.addPostContent(postImage: thumbnailImage)
                 })
                   
@@ -196,6 +225,8 @@ class CreatePost: UIViewController,UIImagePickerControllerDelegate,UINavigationC
             
             if let finalImage = selectedImage{
                 picker.dismiss(animated: true, completion: {() -> Void in
+                    self.isImagePost = true
+                    self.PostImage = finalImage
                     self.addPostContent(postImage: finalImage)
                 })
             }
