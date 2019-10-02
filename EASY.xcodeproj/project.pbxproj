@@ -16,6 +16,9 @@
 		223A186C21EBB5BD004714D5 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A186B21EBB5BD004714D5 /* Utility.swift */; };
 		223A186E21EBBB81004714D5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A186D21EBBB81004714D5 /* User.swift */; };
 		22405508234285E500AF7352 /* CreatePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22405507234285E500AF7352 /* CreatePost.swift */; };
+		224305712344A92000FC3EC0 /* PostListingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224305702344A92000FC3EC0 /* PostListingVC.swift */; };
+		224305742344AB0600FC3EC0 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224305722344AB0600FC3EC0 /* PostCell.swift */; };
+		224305752344AB0600FC3EC0 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 224305732344AB0600FC3EC0 /* PostCell.xib */; };
 		2251429022041FFB00880F04 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2251428F22041FFB00880F04 /* Group.swift */; };
 		227065C521EDC6FA00FAA2B8 /* MyChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227065C321EDC6FA00FAA2B8 /* MyChatCell.swift */; };
 		227065C621EDC6FA00FAA2B8 /* MyChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227065C421EDC6FA00FAA2B8 /* MyChatCell.xib */; };
@@ -72,6 +75,9 @@
 		223A186B21EBB5BD004714D5 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		223A186D21EBBB81004714D5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		22405507234285E500AF7352 /* CreatePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePost.swift; sourceTree = "<group>"; };
+		224305702344A92000FC3EC0 /* PostListingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListingVC.swift; sourceTree = "<group>"; };
+		224305722344AB0600FC3EC0 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		224305732344AB0600FC3EC0 /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
 		2251428F22041FFB00880F04 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		227065C321EDC6FA00FAA2B8 /* MyChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChatCell.swift; sourceTree = "<group>"; };
 		227065C421EDC6FA00FAA2B8 /* MyChatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyChatCell.xib; sourceTree = "<group>"; };
@@ -209,6 +215,8 @@
 			children = (
 				227065C321EDC6FA00FAA2B8 /* MyChatCell.swift */,
 				227065C421EDC6FA00FAA2B8 /* MyChatCell.xib */,
+				224305722344AB0600FC3EC0 /* PostCell.swift */,
+				224305732344AB0600FC3EC0 /* PostCell.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -297,6 +305,7 @@
 			children = (
 				2278F6C421ED236800DF524B /* Home.swift */,
 				22405507234285E500AF7352 /* CreatePost.swift */,
+				224305702344A92000FC3EC0 /* PostListingVC.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -456,6 +465,7 @@
 				2278F6C321ED1B9800DF524B /* Settings.storyboard in Resources */,
 				2278F6BF21ED1B6B00DF524B /* MyChat.storyboard in Resources */,
 				2278F6B921ED1AF800DF524B /* CustomTabBarView.xib in Resources */,
+				224305752344AB0600FC3EC0 /* PostCell.xib in Resources */,
 				227065C621EDC6FA00FAA2B8 /* MyChatCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -617,9 +627,11 @@
 				22405508234285E500AF7352 /* CreatePost.swift in Sources */,
 				223A186721EBB1C1004714D5 /* GlobalConstant.swift in Sources */,
 				223A186E21EBBB81004714D5 /* User.swift in Sources */,
+				224305712344A92000FC3EC0 /* PostListingVC.swift in Sources */,
 				2293544021E25E7D000AC927 /* ViewController.swift in Sources */,
 				2278F6C721ED237600DF524B /* MyChat.swift in Sources */,
 				223A186421EBAEBF004714D5 /* LoginVC.swift in Sources */,
+				224305742344AB0600FC3EC0 /* PostCell.swift in Sources */,
 				2293543E21E25E7D000AC927 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

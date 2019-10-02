@@ -22,7 +22,14 @@ class Home: UIViewController,UITableViewDelegate,UITableViewDataSource {
         // Do any additional setup after loading the view.
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+          if self.tabBarController != nil
+          {
+              let tabBar : CustomTabBarController = self.tabBarController as! CustomTabBarController
+              self.edgesForExtendedLayout = UIRectEdge.bottom
+              tabBar.setTabBarHidden(tabBarHidden: false)
+          }
+      }
     
     //MARK: TableView DataSource
     
@@ -50,12 +57,16 @@ class Home: UIViewController,UITableViewDelegate,UITableViewDataSource {
         
     }
     
-  
-    
-    private func getCategoriesList(){
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if #available(iOS 13.0, *) {
+            let vc: PostListingVC = STORYBOARD.HOME.instantiateViewController(identifier: "PostListingVC") as! PostListingVC
+            vc.postCategory = GROUPS_CATEGORIES.GROUP_PHOTOS_PLUS_NAME[indexPath.row]
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            // Fallback on earlier versions
+        }
         
     }
-    
     
 
     /*

@@ -102,6 +102,38 @@
             endingLineNumber = "434"
             landmarkName = "CreatePost(userId:username:categoryId:categoryName:postText:mediaType:postMediaData:videoUrl:loginHandler:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FE1696F4-DAAB-446B-A44F-08BFDAB67746 - 1222f23591157c3e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;__C.FIRStorageMetadata&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static EASY.User.CreatePost(userId: Swift.String, username: Swift.String, categoryId: Swift.String, categoryName: Swift.String, postText: Swift.String, mediaType: EASY.POSTMEDIA, postMediaData: Foundation.Data, videoUrl: Swift.Optional&lt;Foundation.URL&gt;, loginHandler: Swift.Optional&lt;(Swift.Optional&lt;Swift.String&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "EASY"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macos/Documents/IOS_Heart/EASY_Firestore/EASY/Model/User.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "434"
+                  endingLineNumber = "434"
+                  offsetFromSymbolStart = "828">
+               </Location>
+               <Location
+                  uuid = "FE1696F4-DAAB-446B-A44F-08BFDAB67746 - 90136f070702ff15"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.URL&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #2 (Swift.Optional&lt;__C.FIRStorageMetadata&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static EASY.User.CreatePost(userId: Swift.String, username: Swift.String, categoryId: Swift.String, categoryName: Swift.String, postText: Swift.String, mediaType: EASY.POSTMEDIA, postMediaData: Foundation.Data, videoUrl: Swift.Optional&lt;Foundation.URL&gt;, loginHandler: Swift.Optional&lt;(Swift.Optional&lt;Swift.String&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "EASY"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macos/Documents/IOS_Heart/EASY_Firestore/EASY/Model/User.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "435"
+                  endingLineNumber = "435"
+                  offsetFromSymbolStart = "496">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -150,6 +182,38 @@
             endingLineNumber = "444"
             landmarkName = "CreatePost(userId:username:categoryId:categoryName:postText:mediaType:postMediaData:videoUrl:loginHandler:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FC8C9117-F8BA-496B-9193-708C45BCC9E8 - 90136f070702ff15"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.URL&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #2 (Swift.Optional&lt;__C.FIRStorageMetadata&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static EASY.User.CreatePost(userId: Swift.String, username: Swift.String, categoryId: Swift.String, categoryName: Swift.String, postText: Swift.String, mediaType: EASY.POSTMEDIA, postMediaData: Foundation.Data, videoUrl: Swift.Optional&lt;Foundation.URL&gt;, loginHandler: Swift.Optional&lt;(Swift.Optional&lt;Swift.String&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "EASY"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macos/Documents/IOS_Heart/EASY_Firestore/EASY/Model/User.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "444"
+                  endingLineNumber = "444"
+                  offsetFromSymbolStart = "2972">
+               </Location>
+               <Location
+                  uuid = "FC8C9117-F8BA-496B-9193-708C45BCC9E8 - a13dd6c13c9b8ab4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Foundation.URL&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #2 (Swift.Optional&lt;__C.FIRStorageMetadata&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static EASY.User.CreatePost(userId: Swift.String, username: Swift.String, categoryId: Swift.String, categoryName: Swift.String, postText: Swift.String, mediaType: EASY.POSTMEDIA, postMediaData: Foundation.Data, videoUrl: Swift.Optional&lt;Foundation.URL&gt;, loginHandler: Swift.Optional&lt;(Swift.Optional&lt;Swift.String&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "EASY"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macos/Documents/IOS_Heart/EASY_Firestore/EASY/Model/User.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "445"
+                  endingLineNumber = "445"
+                  offsetFromSymbolStart = "208">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -165,6 +229,86 @@
             startingLineNumber = "446"
             endingLineNumber = "446"
             landmarkName = "CreatePost(userId:username:categoryId:categoryName:postText:mediaType:postMediaData:videoUrl:loginHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "48B8EB21-1975-4C9B-8343-3A3CAB5D66D4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EASY/Model/User.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "486"
+            endingLineNumber = "486"
+            landmarkName = "showPosts(categoryName:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "48B8EB21-1975-4C9B-8343-3A3CAB5D66D4 - 9f08904d4d7af89"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static EASY.User.showPosts(categoryName: Swift.String, completion: (Swift.Array&lt;EASY.FirebasePost&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "EASY"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macos/Documents/IOS_Heart/EASY_Firestore/EASY/Model/User.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "486"
+                  endingLineNumber = "486"
+                  offsetFromSymbolStart = "504">
+               </Location>
+               <Location
+                  uuid = "48B8EB21-1975-4C9B-8343-3A3CAB5D66D4 - c0c3a594cfff5857"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static EASY.User.showPosts(categoryName: Swift.String, completion: (Swift.Array&lt;EASY.FirebasePost&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "EASY"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macos/Documents/IOS_Heart/EASY_Firestore/EASY/Model/User.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "485"
+                  endingLineNumber = "485"
+                  offsetFromSymbolStart = "152">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DBE82D8B-BCCF-46EB-BCA2-A644EA1C3E66"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EASY/Model/User.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "491"
+            endingLineNumber = "491"
+            landmarkName = "showPosts(categoryName:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0DA1490F-19C5-4948-A282-D965DE9603AD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EASY/Controller/Home/PostListingVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

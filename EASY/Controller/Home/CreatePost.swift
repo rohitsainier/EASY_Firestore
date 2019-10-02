@@ -47,6 +47,7 @@ class CreatePost: UIViewController,UIImagePickerControllerDelegate,UINavigationC
                 User.CreatePost(userId: AppModel.shared.loggedInUser.id, username: AppModel.shared.loggedInUser.name, categoryId: categoryID, categoryName: categoryName, postText: postTextView.text, mediaType: POSTMEDIA.IMAGE, postMediaData: compressImage(image: PostImage ?? UIImage()), videoUrl: nil) { (loginHandler) in
                     if loginHandler == nil{
                         displayToast("\(self.categoryName) Post created successfully")
+                        self.dismiss(animated: true, completion: nil)
                     }
                     else{
                         displayToast(loginHandler ?? "")
@@ -57,6 +58,7 @@ class CreatePost: UIViewController,UIImagePickerControllerDelegate,UINavigationC
                 User.CreatePost(userId: AppModel.shared.loggedInUser.id, username: AppModel.shared.loggedInUser.name, categoryId: categoryID, categoryName: categoryName, postText: postTextView.text, mediaType: POSTMEDIA.VIDEO, postMediaData: Data(), videoUrl: videoUrl) { (loginHandler) in
                     if loginHandler == nil{
                         displayToast("\(self.categoryName) Post created successfully")
+                        self.dismiss(animated: true, completion: nil)
                     }
                     else{
                         displayToast(loginHandler ?? "")

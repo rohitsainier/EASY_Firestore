@@ -400,9 +400,8 @@ class User: NSObject {
                                 return
                             }
                             var ref: DocumentReference? = nil
-                            ref = db.collection("POSTS").document().collection(categoryName).document()
-                            let values: [String: Any] = ["userId": userId,"username": username, "categoryId": categoryId, "categoryName": categoryName,"postText":postText,"mediaType":"IMAGE","postUrl":path,"postId":(ref?.documentID)!]
-                            let postData : [String: Any] = ["data":values]
+                            ref = db.collection(categoryName).document()
+                            let postData: [String: Any] = ["userId": userId,"username": username, "categoryId": categoryId, "categoryName": categoryName,"postText":postText,"mediaType":"IMAGE","postUrl":path,"postId":(ref?.documentID)!,"timestamp":Date().timeIntervalSince1970,"creatorProfilePic":AppModel.shared.loggedInUser.profilePicLink]
                             ref?.setData(postData)
                             { error in
                                 if let err = error {
@@ -438,9 +437,9 @@ class User: NSObject {
                                 return
                             }
                             var ref: DocumentReference? = nil
-                            ref = db.collection("POSTS").document().collection(categoryName).document()
-                            let values: [String: Any] = ["userId": userId,"username": username, "categoryId": categoryId, "categoryName": categoryName,"postText":postText,"mediaType":"VIDEO","postUrl":path,"postId":(ref?.documentID)!]
-                            let postData : [String: Any] = ["data":values]
+                            ref = db.collection(categoryName).document()
+                            let postData: [String: Any] = ["userId": userId,"username": username, "categoryId": categoryId, "categoryName": categoryName,"postText":postText,"mediaType":"VIDEO","postUrl":path,"postId":(ref?.documentID)!,"timestamp":Date().timeIntervalSince1970,"creatorProfilePic":AppModel.shared.loggedInUser.profilePicLink]
+                            
                             ref?.setData(postData)
                             { error in
                                 if let err = error {
@@ -470,8 +469,54 @@ class User: NSObject {
            
        }
        //END
-       
-       
+    
+    
+    //============================
+    //MARK:- Show Post
+    //============================
+    class func showPosts(categoryName: String, completion: @escaping ([FirebasePost]) -> Swift.Void) {
+        // [START setup]
+        let settings = FirestoreSettings()
+        settings.areTimestampsInSnapshotsEnabled = true
+        Firestore.firestore().settings = settings
+        // [END setup]
+        db = Firestore.firestore()
+        // [START get_multiple_all]
+        var posts: [FirebasePost] = [FirebasePost]()
+        db.collection(categoryName).getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                posts = querySnapshot!.documents.compactMap({FirebasePost(dictionary: $0.data())})
+                completion(posts)
+            }
+        }
+        // [END get_multiple_all]
+    }//END
+    
+    
+    
+    class func updatedPosts(categoryName: String, completion: @escaping (FirebasePost) -> Swift.Void) {
+        // [START setup]
+        let settings = FirestoreSettings()
+        settings.areTimestampsInSnapshotsEnabled = true
+        Firestore.firestore().settings = settings
+        // [END setup]
+        db = Firestore.firestore()
+        // [START get_multiple_all]
+        db.collection(categoryName).whereField("timestamp", isGreaterThan: Date())
+            .addSnapshotListener { (querySnapshot, error) in
+                guard let snapshot = querySnapshot else {return}
+                snapshot.documentChanges.forEach { (diff) in
+                    //if post added
+                    if diff.type == .added{
+                        let post = FirebasePost(dictionary: diff.document.data())
+                        completion(post!)
+                    }
+                }
+        }
+        // [END get_multiple_all]
+    }//END
     
 }
 //END USER
