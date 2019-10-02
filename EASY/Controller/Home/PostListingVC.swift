@@ -54,16 +54,20 @@ class PostListingVC: UIViewController,UITableViewDelegate,UITableViewDataSource 
             return UITableViewCell()
         }
         if postArr[indexPath.row].mediaType == "IMAGE"{
+        cell.postImageView.contentMode = .scaleAspectFill
         cell.usernameLbl.text = postArr[indexPath.row].username
         cell.postContentLbl.text = postArr[indexPath.row].postText
+        cell.dateLbl.text = ""
         cell.postImageView.downloadCachedImage(placeholder: "", urlString: postArr[indexPath.row].postUrl)
         let UserImage = UIImageView()
             UserImage.downloadCachedImage(placeholder: "", urlString: postArr[indexPath.row].creatorProfilePic)
         cell.userBtn.setImage(UserImage.image, for: UIControl.State.normal)
         }
         else{
+            cell.postImageView.contentMode = .scaleAspectFit
             cell.usernameLbl.text = postArr[indexPath.row].username
             cell.postContentLbl.text = postArr[indexPath.row].postText
+            cell.dateLbl.text = ""
             cell.postImageView.image = UIImage(named: "play")
             let UserImage = UIImageView()
                 UserImage.downloadCachedImage(placeholder: "", urlString: postArr[indexPath.row].creatorProfilePic)
