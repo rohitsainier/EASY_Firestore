@@ -10,13 +10,21 @@ import Foundation
 import UIKit
 import Firebase
 import FirebaseAuth
-import FirebaseStorage
+//import FirebaseStorage
 import CoreLocation
 
 typealias Loginhandler = (_ msg:String?) -> Void //closure
 var db: Firestore!
 
 
+enum POSTMEDIA{
+    case IMAGE
+    case VIDEO
+}
+
+//=======================
+//MARK:- USER
+//=======================
 class User: NSObject {
     
     //MARK: Properties
@@ -68,12 +76,15 @@ class User: NSObject {
         static let INVALID_ACTION_CODE = "Action code is Invalid"
         static let INVALID_MESSAGE_PAYLOAD = "Message payload is not valid"
         static let INVALID_SENDER = "Sender is not valid"
-        static let INVALID_RECIPIENT_EMAIL = "r]Recipient mail is not valid"
+        static let INVALID_RECIPIENT_EMAIL = "Recipient mail is not valid"
         static let KEYCHAIN_ERROR = "Error in keychain"
         static let INTERNAL_ERROR = "Some internal Error"
         
     }//errorCodes
     
+    //=============================
+    //MARK:- handleErrors
+    //=============================
     class func handleErrors(err: NSError ,loginHandler:Loginhandler){
         
         if let errCode = AuthErrorCode(rawValue: err.code){
@@ -172,9 +183,13 @@ class User: NSObject {
             }
             
         }
-    }//HandleError func
+    }
+    //END error handler
     
     
+    //====================================
+    //MARK:- registerUser
+    //====================================
     class func registerUser(withName:String,email:String,password:String,phoneNumber: String ,profilePic:UIImage,location: Dictionary<String, Any>,loginHandler: Loginhandler?){
         // [START setup]
         let settings = FirestoreSettings()
@@ -189,19 +204,19 @@ class User: NSObject {
                 user?.user.sendEmailVerification(completion: { (error) in
                     if error == nil{
                         let storageRef = Storage.storage().reference().child("usersProfilePics").child("\((user?.user.uid)!).jpg")
-                        let imageData = profilePic.jpegData(compressionQuality: 0.5)// UIImageJPEGRepresentation(profilePic, 0.1)//swift 3 version
-                        storageRef.putData(imageData!, metadata: nil, completion: { (metadata, err) in
+                        let imageData = compressImage(image: profilePic)// Compress Image to speed up the api
+                        storageRef.putData(imageData, metadata: nil, completion: { (metadata, err) in
                             if err == nil {
                                 storageRef.downloadURL(completion: { (url, error) in
                                     if error == nil{
                                         guard let path = url?.absoluteString else{
                                             return
                                         }
-                                        let values: [String: Any] = ["name": withName, "email": email, "profilePicLink": path,"phoneNumber":phoneNumber,"location":location]
+                                        let values: [String: Any] = ["id":(user?.user.uid)!,"name": withName, "email": email, "profilePicLink": path,"phoneNumber":phoneNumber,"location":location]
                                         let credentials : [String: Any] = ["credentials":values]
                                         var ref: DocumentReference? = nil
                                         
-                                        ref = db.collection("USER").document((user?.user.uid)!)
+                                        ref = db.collection("USERS").document((user?.user.uid)!)
                                         ref?.setData(credentials)
                                         { error in
                                             if let err = error {
@@ -219,9 +234,7 @@ class User: NSObject {
                                         }
                                     }else{
                                         removeLoader()
-                                        
                                         self.handleErrors(err: error! as NSError, loginHandler: loginHandler!)
-                                        
                                     }
                                 })
                                 
@@ -244,8 +257,13 @@ class User: NSObject {
             }
             
         }
-    }//Register User
+    }
+    //END Register User
     
+    
+    //==============================
+    //MARK:- loginUser
+    //==============================
     class func loginUser(email: String, password: String, loginHandler: Loginhandler?) {
         showLoader()
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
@@ -255,29 +273,250 @@ class User: NSObject {
                     return
                 }
                 if status == true{
-                    removeLoader()
-                    loginHandler!(nil)
+                    downloadUserInfo(userId: (user?.user.uid)!) { (userInfo) in
+                        AppModel.shared.loggedInUser = userInfo
+                        removeLoader()
+                        loginHandler!(nil)
+                    }
+                    
                 }else{
                     removeLoader()
                     loginHandler!("Email is not verified")
                 }
-                //                Database.database().reference().child("users").child((user?.user.uid)!).child("credentials").observeSingleEvent(of: .value, with: { (snapshot) in
-                //                    let credentialsData = snapshot.value as! [String: Any]
-                //                    let isPhoneVerified = credentialsData["isVerified"] as! Bool
-                //                    if isPhoneVerified == true{
-                //                        loginHandler!(nil)
-                //                        UIViewController.removeSpinner(spinner: sv)
-                //                    }else{
-                //                        UIViewController.removeSpinner(spinner: sv)
-                //                        loginHandler!("Mobile Number is not Verified")
-                //                    }
-                //                })
+                
                 
             } else {
                 removeLoader()
                 self.handleErrors(err: error! as NSError, loginHandler: loginHandler!)
             }
         }
-}//Login User
+    }
+    //END Login User
+    
+    //============================
+    //MARK:- Download Users
+    //============================
+    
+    class func downloadAllUsers(exceptID: String, completion: @escaping (User) -> Swift.Void) {
+        // [START setup]
+        let settings = FirestoreSettings()
+        settings.areTimestampsInSnapshotsEnabled = true
+        Firestore.firestore().settings = settings
+        // [END setup]
+        db = Firestore.firestore()
+        db.collection("USERS")
+            .getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        print("\(document.documentID) => \(document.data())")
+                       
+                       let data = document.data()
+                       let id = document.documentID
+                        guard let credentials = data["credentials"] as? [String: Any] else{
+                            return
+                        }
+                        if id != exceptID {
+                            let name = credentials["name"]!
+                            let email = credentials["email"]!
+                            let location = credentials["location"] as! [String: Any]
+                            let latitude = location["latitude"]
+                            let longitude = location["longitude"]
+                            let link = URL.init(string: credentials["profilePicLink"]! as! String)
+                            URLSession.shared.dataTask(with: link!, completionHandler: { (data, response, error) in
+                                if error == nil {
+                                    let profilePic = UIImage.init(data: data!)
+                                    let user = User.init(name: name as! String, email: email as! String, id: id, profilePic: profilePic!, latitude: latitude!, longitude: longitude!)
+                                    completion(user)
+                                }
+                            }).resume()
+                        }
+                    }
+                }
+            }
+}//Download all users
+    
+    
+    //============================
+    //MARK:- Download User Info
+    //============================
+    
+    class func downloadUserInfo(userId: String, completion: @escaping (FirebaseUser) -> Swift.Void) {
+        // [START setup]
+        let settings = FirestoreSettings()
+        settings.areTimestampsInSnapshotsEnabled = true
+        Firestore.firestore().settings = settings
+        // [END setup]
+        db = Firestore.firestore()
+        db.collection("USERS")
+            .getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        print("\(document.documentID) => \(document.data())")
+                        
+                        let data = document.data()
+                        let id = document.documentID
+                        guard let credentials = data["credentials"] as? [String: Any] else{
+                            return
+                        }
+                        
+                        if id == userId {
+                            //Converting into json format
+                            let jsonData = try? JSONSerialization.data(withJSONObject: credentials, options: [])
+                            do {
+                                //Decoding data
+                                let user = try JSONDecoder().decode(FirebaseUser.self, from: jsonData!)
+                                completion(user)
+                                
+                            }
+                            catch let err {
+                                print("Err", err)
+                            }
+                        }
+                    }
+                }
+        }
+    }//Get User Info
+    
+    
+    class func CreatePost(userId:String,username:String,categoryId:String,categoryName: String ,postText:String,mediaType: POSTMEDIA,postMediaData:Data,videoUrl: URL?,loginHandler: Loginhandler?){
+           // [START setup]
+           let settings = FirestoreSettings()
+           settings.areTimestampsInSnapshotsEnabled = true
+           Firestore.firestore().settings = settings
+           // [END setup]
+           db = Firestore.firestore()
+           showLoader()
+        if mediaType == .IMAGE{
+            let storageRef = Storage.storage().reference().child("POSTS_IMAGES").child("\(Date().timeIntervalSince1970).jpg")
+            storageRef.putData(postMediaData, metadata: nil, completion: { (metadata, err) in
+                if err == nil {
+                    storageRef.downloadURL(completion: { (url, error) in
+                        if error == nil{
+                            guard let path = url?.absoluteString else{
+                                return
+                            }
+                            var ref: DocumentReference? = nil
+                            ref = db.collection(categoryName).document()
+                            let postData: [String: Any] = ["userId": userId,"username": username, "categoryId": categoryId, "categoryName": categoryName,"postText":postText,"mediaType":"IMAGE","postUrl":path,"postId":(ref?.documentID)!,"timestamp":Date().timeIntervalSince1970,"creatorProfilePic":AppModel.shared.loggedInUser.profilePicLink]
+                            ref?.setData(postData)
+                            { error in
+                                if let err = error {
+                                    print("Error updating document: \(err)")
+                                    removeLoader()
+                                    self.handleErrors(err: error! as NSError, loginHandler: loginHandler!)
+                                    
+                                } else {
+                                    removeLoader()
+                                    loginHandler!(nil)
+                                    print("Document successfully updated")
+                                }
+                                
+                                
+                            }
+                        }else{
+                            removeLoader()
+                            self.handleErrors(err: error! as NSError, loginHandler: loginHandler!)
+                        }
+                    })
+                    
+                }
+            })
+        }
+        else{
+            let fileName = NSUUID().uuidString + ".mov"
+            let storageRef = Storage.storage().reference().child("POSTS_VIDEOS").child(fileName)
+            storageRef.putFile(from: videoUrl!, metadata: nil, completion: { (metadata, err) in
+                if err == nil {
+                    storageRef.downloadURL(completion: { (url, error) in
+                        if error == nil{
+                            guard let path = url?.absoluteString else{
+                                return
+                            }
+                            var ref: DocumentReference? = nil
+                            ref = db.collection(categoryName).document()
+                            let postData: [String: Any] = ["userId": userId,"username": username, "categoryId": categoryId, "categoryName": categoryName,"postText":postText,"mediaType":"VIDEO","postUrl":path,"postId":(ref?.documentID)!,"timestamp":Date().timeIntervalSince1970,"creatorProfilePic":AppModel.shared.loggedInUser.profilePicLink]
+                            
+                            ref?.setData(postData)
+                            { error in
+                                if let err = error {
+                                    print("Error updating document: \(err)")
+                                    removeLoader()
+                                    self.handleErrors(err: error! as NSError, loginHandler: loginHandler!)
+                                    
+                                } else {
+                                    removeLoader()
+                                    loginHandler!(nil)
+                                    print("Document successfully updated")
+                                }
+                                
+                                
+                            }
+                        }else{
+                            removeLoader()
+                            self.handleErrors(err: error! as NSError, loginHandler: loginHandler!)
+                        }
+                    })
+                    
+                }
+            })
+        }
 
+        
+           
+       }
+       //END
+    
+    
+    //============================
+    //MARK:- Show Post
+    //============================
+    class func showPosts(categoryName: String, completion: @escaping ([FirebasePost]) -> Swift.Void) {
+        // [START setup]
+        let settings = FirestoreSettings()
+        settings.areTimestampsInSnapshotsEnabled = true
+        Firestore.firestore().settings = settings
+        // [END setup]
+        db = Firestore.firestore()
+        // [START get_multiple_all]
+        var posts: [FirebasePost] = [FirebasePost]()
+        db.collection(categoryName).getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                posts = querySnapshot!.documents.compactMap({FirebasePost(dictionary: $0.data())})
+                completion(posts)
+            }
+        }
+        // [END get_multiple_all]
+    }//END
+    
+    
+    
+    class func updatedPosts(categoryName: String, completion: @escaping (FirebasePost) -> Swift.Void) {
+        // [START setup]
+        let settings = FirestoreSettings()
+        settings.areTimestampsInSnapshotsEnabled = true
+        Firestore.firestore().settings = settings
+        // [END setup]
+        db = Firestore.firestore()
+        // [START get_multiple_all]
+        db.collection(categoryName).whereField("timestamp", isGreaterThan: Date())
+            .addSnapshotListener { (querySnapshot, error) in
+                guard let snapshot = querySnapshot else {return}
+                snapshot.documentChanges.forEach { (diff) in
+                    //if post added
+                    if diff.type == .added{
+                        let post = FirebasePost(dictionary: diff.document.data())
+                        completion(post!)
+                    }
+                }
+        }
+        // [END get_multiple_all]
+    }//END
+    
 }
+//END USER

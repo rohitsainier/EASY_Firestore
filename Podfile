@@ -14,6 +14,7 @@ target 'EASY' do
     pod 'NVActivityIndicatorView'
     pod 'Toaster'
     pod 'IQKeyboardManagerSwift'
+    pod 'SDWebImage', '~> 4.0'
 
   target 'EASYTests' do
     inherit! :search_paths

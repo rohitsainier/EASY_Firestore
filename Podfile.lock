@@ -137,6 +137,9 @@ PODS:
     - NVActivityIndicatorView/Presenter (= 4.4.0)
   - NVActivityIndicatorView/Presenter (4.4.0)
   - Protobuf (3.6.1)
+  - SDWebImage (4.4.7):
+    - SDWebImage/Core (= 4.4.7)
+  - SDWebImage/Core (4.4.7)
   - Toaster (2.1.1)
 
 DEPENDENCIES:
@@ -147,6 +150,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - IQKeyboardManagerSwift
   - NVActivityIndicatorView
+  - SDWebImage (~> 4.0)
   - Toaster
 
 SPEC REPOS:
@@ -175,6 +179,7 @@ SPEC REPOS:
     - nanopb
     - NVActivityIndicatorView
     - Protobuf
+    - SDWebImage
     - Toaster
 
 SPEC CHECKSUMS:
@@ -202,8 +207,9 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   NVActivityIndicatorView: ec7440a57af2450319d3a4181cca7da6fc127064
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
+  SDWebImage: c10d14a8883ebd89664f02a422006f66a85c0c5d
   Toaster: a6c9532de1ded8105e77376f7dffeb2e12b46dbb
 
-PODFILE CHECKSUM: 7150925878c7540d25a36cfe180652190878e363
+PODFILE CHECKSUM: 5971f45ca84cf8ccd4547d313b12f96ea8b1981e
 
 COCOAPODS: 1.5.3

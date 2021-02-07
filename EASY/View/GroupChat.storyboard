@@ -17,7 +17,36 @@
                     <view key="view" contentMode="scaleToFill" id="7Ad-5R-kHR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yJC-5t-TK7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Groups" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXv-6P-6AG">
+                                        <rect key="frame" x="161" y="28.5" width="53" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.44705882349999998" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="7qe-Wh-AjO"/>
+                                    <constraint firstItem="RXv-6P-6AG" firstAttribute="centerX" secondItem="yJC-5t-TK7" secondAttribute="centerX" id="bF1-61-0aI"/>
+                                    <constraint firstItem="RXv-6P-6AG" firstAttribute="top" secondItem="yJC-5t-TK7" secondAttribute="top" constant="28.5" id="mnf-bE-Xpc"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="gradientBackgroundTypeAdapter">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yJC-5t-TK7" firstAttribute="trailing" secondItem="ygD-QA-gTs" secondAttribute="trailing" id="JGF-Jc-Z5e"/>
+                            <constraint firstItem="yJC-5t-TK7" firstAttribute="top" secondItem="7Ad-5R-kHR" secondAttribute="top" id="Rnq-5u-4dc"/>
+                            <constraint firstItem="yJC-5t-TK7" firstAttribute="leading" secondItem="ygD-QA-gTs" secondAttribute="leading" id="g99-s9-s5L"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ygD-QA-gTs"/>
                     </view>
                     <navigationItem key="navigationItem" id="y81-Hs-nf8"/>

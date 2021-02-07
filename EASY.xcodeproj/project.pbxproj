@@ -7,12 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22103B07220EEB6A009CE3D3 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22103B06220EEB6A009CE3D3 /* CustomTextField.swift */; };
+		223009AE22056EE8003090A7 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223009AD22056EE8003090A7 /* CustomView.swift */; };
 		223A186221EBAE8A004714D5 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A186121EBAE8A004714D5 /* Register.swift */; };
 		223A186421EBAEBF004714D5 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A186321EBAEBF004714D5 /* LoginVC.swift */; };
 		223A186721EBB1C1004714D5 /* GlobalConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A186621EBB1C1004714D5 /* GlobalConstant.swift */; };
 		223A186A21EBB322004714D5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A186921EBB322004714D5 /* Extensions.swift */; };
 		223A186C21EBB5BD004714D5 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A186B21EBB5BD004714D5 /* Utility.swift */; };
 		223A186E21EBBB81004714D5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A186D21EBBB81004714D5 /* User.swift */; };
+		22405508234285E500AF7352 /* CreatePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22405507234285E500AF7352 /* CreatePost.swift */; };
+		224305712344A92000FC3EC0 /* PostListingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224305702344A92000FC3EC0 /* PostListingVC.swift */; };
+		224305742344AB0600FC3EC0 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224305722344AB0600FC3EC0 /* PostCell.swift */; };
+		224305752344AB0600FC3EC0 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 224305732344AB0600FC3EC0 /* PostCell.xib */; };
+		2251429022041FFB00880F04 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2251428F22041FFB00880F04 /* Group.swift */; };
+		227065C521EDC6FA00FAA2B8 /* MyChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227065C321EDC6FA00FAA2B8 /* MyChatCell.swift */; };
+		227065C621EDC6FA00FAA2B8 /* MyChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227065C421EDC6FA00FAA2B8 /* MyChatCell.xib */; };
 		2278F6B921ED1AF800DF524B /* CustomTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2278F6B621ED1AF800DF524B /* CustomTabBarView.xib */; };
 		2278F6BA21ED1AF800DF524B /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2278F6B721ED1AF800DF524B /* CustomTabBarView.swift */; };
 		2278F6BB21ED1AF800DF524B /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2278F6B821ED1AF800DF524B /* CustomTabBarController.swift */; };
@@ -32,6 +41,8 @@
 		2293545321E25E80000AC927 /* EASYTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2293545221E25E80000AC927 /* EASYTests.swift */; };
 		2293545E21E25E80000AC927 /* EASYUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2293545D21E25E80000AC927 /* EASYUITests.swift */; };
 		2293546C21E26355000AC927 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2293546B21E26355000AC927 /* GoogleService-Info.plist */; };
+		22A9D3432343E45B00C98B24 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A9D3422343E45B00C98B24 /* AppModel.swift */; };
+		22F35ED221F104DA00C215BF /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F35ED121F104DA00C215BF /* ChatController.swift */; };
 		78F2AB995DD16BA4B417FF8E /* Pods_EASYTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C25CCF48CFB67A478F55A54C /* Pods_EASYTests.framework */; };
 		9DD37F518423D0A8BFF36FA6 /* Pods_EASYUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAE0B760F00ED0A354EFBDF /* Pods_EASYUITests.framework */; };
 		E9D5E75BDE852DC37080AB61 /* Pods_EASY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EB8354196583980EADC176 /* Pods_EASY.framework */; };
@@ -55,12 +66,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22103B06220EEB6A009CE3D3 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		223009AD22056EE8003090A7 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		223A186121EBAE8A004714D5 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		223A186321EBAEBF004714D5 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		223A186621EBB1C1004714D5 /* GlobalConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstant.swift; sourceTree = "<group>"; };
 		223A186921EBB322004714D5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		223A186B21EBB5BD004714D5 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		223A186D21EBBB81004714D5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		22405507234285E500AF7352 /* CreatePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePost.swift; sourceTree = "<group>"; };
+		224305702344A92000FC3EC0 /* PostListingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListingVC.swift; sourceTree = "<group>"; };
+		224305722344AB0600FC3EC0 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		224305732344AB0600FC3EC0 /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
+		2251428F22041FFB00880F04 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		227065C321EDC6FA00FAA2B8 /* MyChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChatCell.swift; sourceTree = "<group>"; };
+		227065C421EDC6FA00FAA2B8 /* MyChatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyChatCell.xib; sourceTree = "<group>"; };
 		2278F6B621ED1AF800DF524B /* CustomTabBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTabBarView.xib; sourceTree = "<group>"; };
 		2278F6B721ED1AF800DF524B /* CustomTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
 		2278F6B821ED1AF800DF524B /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
@@ -86,6 +106,8 @@
 		2293545D21E25E80000AC927 /* EASYUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EASYUITests.swift; sourceTree = "<group>"; };
 		2293545F21E25E80000AC927 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2293546B21E26355000AC927 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		22A9D3422343E45B00C98B24 /* AppModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		22F35ED121F104DA00C215BF /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
 		35EB8354196583980EADC176 /* Pods_EASY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EASY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45519EA86E019E165059BC48 /* Pods-EASYTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EASYTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EASYTests/Pods-EASYTests.release.xcconfig"; sourceTree = "<group>"; };
 		46BBB7CFD6E160F702E84E36 /* Pods-EASYUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EASYUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EASYUITests/Pods-EASYUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -138,8 +160,11 @@
 		223A186521EBB0C8004714D5 /* ProjectHelper */ = {
 			isa = PBXGroup;
 			children = (
+				22A9D3422343E45B00C98B24 /* AppModel.swift */,
 				223A186621EBB1C1004714D5 /* GlobalConstant.swift */,
 				223A186B21EBB5BD004714D5 /* Utility.swift */,
+				223009AD22056EE8003090A7 /* CustomView.swift */,
+				22103B06220EEB6A009CE3D3 /* CustomTextField.swift */,
 			);
 			path = ProjectHelper;
 			sourceTree = "<group>";
@@ -155,12 +180,11 @@
 		2242CF7B21EB9F60002809F8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				223A186121EBAE8A004714D5 /* Register.swift */,
-				223A186321EBAEBF004714D5 /* LoginVC.swift */,
-				2278F6C421ED236800DF524B /* Home.swift */,
-				2278F6C621ED237600DF524B /* MyChat.swift */,
-				2278F6C821ED238400DF524B /* GroupChat.swift */,
-				2278F6CA21ED239400DF524B /* Settings.swift */,
+				22F35ED021F1049900C215BF /* Settings */,
+				22F35ECF21F1048E00C215BF /* GroupChat */,
+				22F35ECE21F1048500C215BF /* MyChat */,
+				22F35ECD21F1047900C215BF /* Home */,
+				22F35ECC21F1046600C215BF /* Main */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -181,8 +205,20 @@
 			isa = PBXGroup;
 			children = (
 				223A186D21EBBB81004714D5 /* User.swift */,
+				2251428F22041FFB00880F04 /* Group.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		227065C221EDC69500FAA2B8 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				227065C321EDC6FA00FAA2B8 /* MyChatCell.swift */,
+				227065C421EDC6FA00FAA2B8 /* MyChatCell.xib */,
+				224305722344AB0600FC3EC0 /* PostCell.swift */,
+				224305732344AB0600FC3EC0 /* PostCell.xib */,
+			);
+			path = Xibs;
 			sourceTree = "<group>";
 		};
 		2278F6B521ED1AF800DF524B /* CustomBottomBar */ = {
@@ -220,6 +256,7 @@
 		2293543C21E25E7D000AC927 /* EASY */ = {
 			isa = PBXGroup;
 			children = (
+				227065C221EDC69500FAA2B8 /* Xibs */,
 				223A186821EBB2F0004714D5 /* Extensions */,
 				223A186521EBB0C8004714D5 /* ProjectHelper */,
 				2242CF7D21EB9F73002809F8 /* Model */,
@@ -252,6 +289,50 @@
 				2293545F21E25E80000AC927 /* Info.plist */,
 			);
 			path = EASYUITests;
+			sourceTree = "<group>";
+		};
+		22F35ECC21F1046600C215BF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				223A186121EBAE8A004714D5 /* Register.swift */,
+				223A186321EBAEBF004714D5 /* LoginVC.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		22F35ECD21F1047900C215BF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2278F6C421ED236800DF524B /* Home.swift */,
+				22405507234285E500AF7352 /* CreatePost.swift */,
+				224305702344A92000FC3EC0 /* PostListingVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		22F35ECE21F1048500C215BF /* MyChat */ = {
+			isa = PBXGroup;
+			children = (
+				2278F6C621ED237600DF524B /* MyChat.swift */,
+				22F35ED121F104DA00C215BF /* ChatController.swift */,
+			);
+			path = MyChat;
+			sourceTree = "<group>";
+		};
+		22F35ECF21F1048E00C215BF /* GroupChat */ = {
+			isa = PBXGroup;
+			children = (
+				2278F6C821ED238400DF524B /* GroupChat.swift */,
+			);
+			path = GroupChat;
+			sourceTree = "<group>";
+		};
+		22F35ED021F1049900C215BF /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				2278F6CA21ED239400DF524B /* Settings.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		546A9C92BB4E2536997C8FB7 /* Pods */ = {
@@ -384,6 +465,8 @@
 				2278F6C321ED1B9800DF524B /* Settings.storyboard in Resources */,
 				2278F6BF21ED1B6B00DF524B /* MyChat.storyboard in Resources */,
 				2278F6B921ED1AF800DF524B /* CustomTabBarView.xib in Resources */,
+				224305752344AB0600FC3EC0 /* PostCell.xib in Resources */,
+				227065C621EDC6FA00FAA2B8 /* MyChatCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +524,7 @@
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
@@ -460,6 +544,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
@@ -528,16 +613,25 @@
 				2278F6BA21ED1AF800DF524B /* CustomTabBarView.swift in Sources */,
 				2278F6C921ED238400DF524B /* GroupChat.swift in Sources */,
 				223A186C21EBB5BD004714D5 /* Utility.swift in Sources */,
+				22F35ED221F104DA00C215BF /* ChatController.swift in Sources */,
 				2278F6BB21ED1AF800DF524B /* CustomTabBarController.swift in Sources */,
+				223009AE22056EE8003090A7 /* CustomView.swift in Sources */,
+				2251429022041FFB00880F04 /* Group.swift in Sources */,
+				22A9D3432343E45B00C98B24 /* AppModel.swift in Sources */,
+				227065C521EDC6FA00FAA2B8 /* MyChatCell.swift in Sources */,
 				2278F6CB21ED239400DF524B /* Settings.swift in Sources */,
 				2278F6C521ED236800DF524B /* Home.swift in Sources */,
 				223A186221EBAE8A004714D5 /* Register.swift in Sources */,
 				223A186A21EBB322004714D5 /* Extensions.swift in Sources */,
+				22103B07220EEB6A009CE3D3 /* CustomTextField.swift in Sources */,
+				22405508234285E500AF7352 /* CreatePost.swift in Sources */,
 				223A186721EBB1C1004714D5 /* GlobalConstant.swift in Sources */,
 				223A186E21EBBB81004714D5 /* User.swift in Sources */,
+				224305712344A92000FC3EC0 /* PostListingVC.swift in Sources */,
 				2293544021E25E7D000AC927 /* ViewController.swift in Sources */,
 				2278F6C721ED237600DF524B /* MyChat.swift in Sources */,
 				223A186421EBAEBF004714D5 /* LoginVC.swift in Sources */,
+				224305742344AB0600FC3EC0 /* PostCell.swift in Sources */,
 				2293543E21E25E7D000AC927 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
